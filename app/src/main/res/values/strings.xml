@@ -4,4 +4,10 @@
     <string name="watch">Watch</string>
     <string name="community">Community</string>
     <string name="profile">Profile</string>
+    <string name="digital_museum">Museum Digital</string>
+    <string name="desc_museum">Rasakan sensasi menjelajahi museum Budaya Indonesia secara digital.</string>
+    <string name="explore">Jelajahi</string>
+    <string name="event">Event</string>
+    <string name="article">Artikel</string>
+    <string name="culture">Budaya</string>
 </resources>
