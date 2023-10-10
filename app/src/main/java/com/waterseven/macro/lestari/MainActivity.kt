@@ -2,6 +2,8 @@ package com.waterseven.macro.lestari
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.waterseven.macro.lestari.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,13 +14,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNav.setOnClickListener { item ->
-            when(item.id) {
-                R.id.homeFragment -> {}
-                R.id.watchFragment -> {}
-                R.id.communityFragment -> {}
-                R.id.profileFragment -> {}
-            }
-        }
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_nav_host) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        binding.bottomNav.setupWithNavController(navController)
     }
 }
