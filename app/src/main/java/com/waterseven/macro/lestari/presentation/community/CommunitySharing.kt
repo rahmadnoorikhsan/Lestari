@@ -1,11 +1,17 @@
 package com.waterseven.macro.lestari.presentation.community
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.waterseven.macro.lestari.R
+import com.waterseven.macro.lestari.adapter.RvCommunityAdapter
+import com.waterseven.macro.lestari.databinding.FragmentCommunitySharingBinding
+import com.waterseven.macro.lestari.databinding.FragmentMyCommunityBinding
+import com.waterseven.macro.lestari.model.community.komunitas
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,16 +24,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class CommunitySharing : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+    private lateinit var binding: FragmentCommunitySharingBinding
+    private lateinit var adapterKeren: RvCommunityAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
@@ -35,26 +36,45 @@ class CommunitySharing : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        binding = FragmentCommunitySharingBinding.inflate(layoutInflater)
+        return binding.root
         return inflater.inflate(R.layout.fragment_community_sharing, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CommunitySharing.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CommunitySharing().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init()
+        setRvAdapter()
     }
+    private fun nama_komunitas(): Array<String> = requireContext().resources.getStringArray(R.array.cari_nama_komunitas)
+    private fun deskripsi_komunitas(): Array<String> = requireContext().resources.getStringArray(R.array.cari_deskripsi_komunitas)
+
+    private fun imageWisata(): List<Int> = listOf(
+        R.drawable.gedong_kuning,
+        R.drawable.bengkel_seni,
+        R.drawable.semarak
+    )
+
+    val dataList: MutableList<komunitas> = mutableListOf()
+
+    private fun init() {
+        adapterKeren = RvCommunityAdapter(dataList)
+        binding.rvCommunitySharing.layoutManager = LinearLayoutManager(requireContext()) // Mengatur layout manager
+        binding.rvCommunitySharing.adapter = adapterKeren // Menghubungkan adapter ke RecyclerView
+    }
+
+    private fun setRvAdapter() {
+
+        val dataList:MutableList<komunitas> = mutableListOf()
+
+        nama_komunitas().forEachIndexed { index, name ->
+            dataList.add(komunitas(imageWisata().get(index),name,deskripsi_komunitas().get(index),"","","" ))
+        }
+
+        Log.d("ISI DATANYA ",dataList.toString())
+        adapterKeren = RvCommunityAdapter(dataList)
+        binding.rvCommunitySharing.adapter = adapterKeren
+
+    }
+
 }

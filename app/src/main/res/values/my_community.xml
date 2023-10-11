@@ -9,7 +9,7 @@
     <string-array name="deskripsi_komunitas">
         <item>Pembelajaran dan pelatihan tari-tarian, teater, dan musik</item>
     </string-array>
-    <string-array name="lokasi">
+    <string-array name="lokasi_komunitas">
         <item> Jl. Bima No. 8 Serengan RT. 04 RW. II, Surakarta.</item>
     </string-array>
     <string-array name="pelatihan">
@@ -20,14 +20,4 @@
     </string-array>
 
 
-<!--    <integer-array name="data_photo">-->
-<!--        <item>@drawable/pura_besakih</item>-->
-<!--        <item>@drawable/kepulauan_derawan</item>-->
-<!--        <item>@drawable/taman_nasional_way_kambas</item>-->
-<!--        <item>@drawable/pantai_parai_tenggiri</item>-->
-<!--        <item>@drawable/nusa_dua_bali</item>-->
-<!--        <item>@drawable/gunung_rinjani</item>-->
-<!--        <item>@drawable/danau_toba</item>-->
-<!--        <item>@drawable/nusa_penida</item>-->
-<!--    </integer-array>-->
 </resources>

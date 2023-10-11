@@ -19,7 +19,7 @@ class RvCommunityAdapter(private val list:List<komunitas>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder){
             with(list[position]){
-                binding.imageView2.setImageResource(this.image)
+                binding.logo.setImageResource(this.image)
                 binding.tvNamaKomunitas.text= this.name
                 binding.tvDeskripsi.text= this.desc
             }
