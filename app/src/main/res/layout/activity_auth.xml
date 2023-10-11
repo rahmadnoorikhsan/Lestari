@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.home.HomeFragment">
+    tools:context=".presentation.auth.AuthActivity">
 
-    <include layout="@layout/content_home"
-        android:id="@+id/content_home"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
