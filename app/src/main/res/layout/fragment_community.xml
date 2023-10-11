@@ -5,26 +5,123 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.community.CommunityFragment">
-
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
+        android:id="@+id/select_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/community"
-        android:textAlignment="center"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_location" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:hint="Solo, Jawa Tengah"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_edit" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/komunitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/select_location"
+        app:layout_constraintVertical_bias="0.0">
 
-    <TextView
+        <LinearLayout
+            android:id="@+id/komunitas_saya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/komunitas_saya"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <Button
+                android:id="@+id/myCommunity"
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_komunitas"
+                android:textAlignment="center"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/bg_navigation_item"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_komunitas"
+                android:textAlignment="center"
+                android:textSize="17sp"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cari_komunitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+            android:id="@+id/communitySharing"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/tv_cari_komunitas"
+            android:textAlignment="center"
+            android:textColor="@color/bg_navigation_item"
+            android:textSize="17sp" />
+
+
+            <TextView
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_komunitas"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/communityFragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="community lestari"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/komunitas" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

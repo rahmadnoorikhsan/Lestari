@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_komunitas">Komunitas Saya</string>
+    <string name="tv_cari_komunitas">Cari Komunitas</string>
+    <string-array name="nama_komunitas">
+        <item>Sanggar Seni Sarwi Retno Budaya</item>
+    </string-array>
+
+    <string-array name="deskripsi_komunitas">
+        <item>Pembelajaran dan pelatihan tari-tarian, teater, dan musik</item>
+    </string-array>
+    <string-array name="lokasi">
+        <item> Jl. Bima No. 8 Serengan RT. 04 RW. II, Surakarta.</item>
+    </string-array>
+    <string-array name="pelatihan">
+        <item>Tari-tarian, Tembang, Teather, Musik</item>
+    </string-array>
+    <string-array name="sejarah_singkat">
+        <item>Sanggar yang didirikan Sarwi pada 24 April 1974 ini beralamat di Jl. Bima No. 8 Serengan RT. 04 RW. II Surakarta. Sanggar ini sebagai wadah pembelajaran dan pelatihan tari-tarian, tembang, teater, dan musik. Sanggar ini mulanya mengajar dan mendidik anak-anak di rumah dengan materi tari-tarian Jateng meliputi tari Golek Sri Rejeki, Gambiranom, Minakjinggo Dayun, dan Kelana Gandrung.Pada 1997, pendiri sanggar membuka cabang di Danukusuman dengan materi tari-tarian Jateng seperti tari Batik, Merak, dan Pemburu Kijang. Pada 1997, Sarwi membuka cabang di Danukusuman dengan mengumpulkan anak-anak di daerah sekitarnya. Mulai tahun 2000-an sampai sekarang, sanggar ini mengembangkan materi tembang, teater, dan musik.</item>
+    </string-array>
+
+
+<!--    <integer-array name="data_photo">-->
+<!--        <item>@drawable/pura_besakih</item>-->
+<!--        <item>@drawable/kepulauan_derawan</item>-->
+<!--        <item>@drawable/taman_nasional_way_kambas</item>-->
+<!--        <item>@drawable/pantai_parai_tenggiri</item>-->
+<!--        <item>@drawable/nusa_dua_bali</item>-->
+<!--        <item>@drawable/gunung_rinjani</item>-->
+<!--        <item>@drawable/danau_toba</item>-->
+<!--        <item>@drawable/nusa_penida</item>-->
+<!--    </integer-array>-->
+</resources>
