@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import com.waterseven.macro.lestari.MainActivity
+import com.waterseven.macro.lestari.R
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -32,7 +34,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         if (v != null) {
             when (v.id){
                 R.id.btn_Login -> {
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    val intent = Intent(this,MainActivity::class.java)
                     startActivity(intent)
                 }
             }
