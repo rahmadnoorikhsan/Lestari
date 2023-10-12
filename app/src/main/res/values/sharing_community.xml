@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cari_nama_komunitas">
+        <item>Sanggar Seni Gedhong Kuning</item>
+        <item>Bengkel Seni Adanu Jumantoro</item>
+        <item>Semarak Candrakirana Art Center</item>
+    </string-array>
+    <string-array name="cari_deskripsi_komunitas">
+        <item>Kegiatan olah seni dan melestarikan seni tradisi Jawa</item>
+        <item>Wadah untuk berolah seni yang bersiffat sosial</item>
+        <item>Kursus dan latihan tari-tarian Jateng, kontemporer, nusantara, dan tari modern</item>
+    </string-array>
+    <string-array name="cari_lokasi_komunitas">
+        <item>Jl. Duku III, Jajar, Kec. Laweyan, Kota Surakarta, Jawa Tengah</item>
+        <item>Jl. Bondan No. 29, RT 3/RW 6, Kemlayan, Serengan, Solo</item>
+        <item>Jalan Kedasih No.22, Kerten, Laweyan, Surakarta</item>
+    </string-array>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#F5F3F7">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="48dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/ic_diversity_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNamaKomunitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Taman Nasional Way Kambas"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="@+id/logo" />
+
+
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="237dp"
+            android:layout_height="21dp"
+            android:text="taman nasional way kambas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvNamaKomunitas"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamaKomunitas" />
+
+        <ImageView
+            android:id="@+id/forum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_forum"
+            app:layout_constraintStart_toStartOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/titleForum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="3 Forum "
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/forum"
+            app:layout_constraintTop_toTopOf="@+id/forum" />
+
+        <ImageView
+            android:id="@+id/navigate_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigate_next_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.923"
+            app:layout_constraintStart_toEndOf="@+id/titleForum"
+            app:layout_constraintTop_toTopOf="@+id/titleForum" />
+
+        <ImageView
+            android:id="@+id/pelatihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_pelatihan"
+            app:layout_constraintStart_toStartOf="@+id/forum"
+            app:layout_constraintTop_toBottomOf="@+id/forum" />
+
+        <TextView
+            android:id="@+id/titlePelatihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="3 Pelatihan "
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/pelatihan"
+            app:layout_constraintTop_toTopOf="@+id/pelatihan"/>
+
+        <ImageView
+            android:id="@+id/navigate_next2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigate_next_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.923"
+            app:layout_constraintStart_toEndOf="@+id/titlePelatihan"
+            app:layout_constraintTop_toTopOf="@+id/titlePelatihan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
