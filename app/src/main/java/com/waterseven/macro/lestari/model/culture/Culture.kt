@@ -1,4 +1,4 @@
-package com.waterseven.macro.lestari.data.dummy.culture
+package com.waterseven.macro.lestari.model.culture
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

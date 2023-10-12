@@ -1,4 +1,4 @@
-package com.waterseven.macro.lestari.adapter
+package com.waterseven.macro.lestari.presentation.community.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

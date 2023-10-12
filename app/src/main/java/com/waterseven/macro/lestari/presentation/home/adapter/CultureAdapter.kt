@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.waterseven.macro.lestari.data.dummy.culture.Culture
+import com.waterseven.macro.lestari.model.culture.Culture
 import com.waterseven.macro.lestari.databinding.ItemCultureBinding
 import com.waterseven.macro.lestari.utils.Extensions.showImageInto
 

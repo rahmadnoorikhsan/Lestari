@@ -1,4 +1,6 @@
-package com.waterseven.macro.lestari.data.dummy.culture
+package com.waterseven.macro.lestari.data.culture
+
+import com.waterseven.macro.lestari.model.culture.Culture
 
 object CulturesData {
     val dummyCultures = listOf(
