@@ -55,7 +55,6 @@ class CommunityFragment : Fragment() {
         return binding?.root
     }
 
-
     private fun komunitasSaya( ) {
         val hasilFragment = MyCommunity() // Ganti dengan fragment yang sesuai
         val transaction = parentFragmentManager.beginTransaction()
@@ -69,7 +68,9 @@ class CommunityFragment : Fragment() {
         transaction.replace(R.id.communityFragmentContainer, hasilFragment)
         transaction.commit()
     }
-
-
-
+    
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

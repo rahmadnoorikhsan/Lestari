@@ -1,8 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
     id("androidx.navigation.safeargs")
+    id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 android {
@@ -57,6 +58,10 @@ dependencies {
     implementation ("androidx.navigation:navigation-fragment-ktx:2.5.2")
     //noinspection GradleDependency
     implementation ("androidx.navigation:navigation-ui-ktx:2.5.2")
+
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+
     //circle image view
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 }
