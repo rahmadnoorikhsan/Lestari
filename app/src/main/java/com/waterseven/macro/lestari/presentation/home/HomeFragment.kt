@@ -5,7 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.waterseven.macro.lestari.data.dummy.culture.Culture
+import com.waterseven.macro.lestari.data.dummy.culture.CulturesData
 import com.waterseven.macro.lestari.databinding.FragmentHomeBinding
+import com.waterseven.macro.lestari.presentation.home.adapter.CultureAdapter
 
 class HomeFragment : Fragment() {
 
@@ -18,5 +23,46 @@ class HomeFragment : Fragment() {
     ): View? {
         _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
         return binding?.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        showListCulture()
+        navigateCulture()
+    }
+
+    private fun showListCulture() {
+        val cultureData = CulturesData.dummyCultures
+
+        val adapter = CultureAdapter { culture ->
+            moveToDetailCulture(culture)
+        }
+
+        binding?.contentHome?.apply {
+            rvCulture.layoutManager = LinearLayoutManager(
+                context, LinearLayoutManager.VERTICAL, false
+            )
+            rvCulture.adapter = adapter
+            adapter.submitList(cultureData)
+        }
+    }
+
+    private fun navigateCulture() {
+        val action = HomeFragmentDirections.actionHomeFragmentToCultureFragment()
+
+        binding?.contentHome?.tvCulture?.setOnClickListener {
+            findNavController().navigate(action)
+        }
+    }
+
+    private fun moveToDetailCulture(culture: Culture) {
+        val data = HomeFragmentDirections.actionHomeFragmentToCultureDetailActivity(culture)
+        findNavController().navigate(data)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
