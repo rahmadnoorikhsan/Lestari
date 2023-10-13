@@ -39,7 +39,7 @@
         tools:layout="@layout/activity_culture_detail" >
         <argument
             android:name="culture"
-            app:argType="com.waterseven.macro.lestari.data.dummy.culture.Culture" />
+            app:argType="com.waterseven.macro.lestari.model.culture.Culture" />
     </activity>
     <fragment
         android:id="@+id/cultureFragment"

@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.waterseven.macro.lestari.data.dummy.culture.Culture
-import com.waterseven.macro.lestari.data.dummy.culture.CulturesData
+import com.waterseven.macro.lestari.model.culture.Culture
+import com.waterseven.macro.lestari.data.culture.CulturesData
 import com.waterseven.macro.lestari.databinding.FragmentHomeBinding
 import com.waterseven.macro.lestari.presentation.home.adapter.CultureAdapter
 

@@ -15,7 +15,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.waterseven.macro.lestari.R
-import com.waterseven.macro.lestari.data.dummy.culture.CulturesData
+import com.waterseven.macro.lestari.data.culture.CulturesData
 import com.waterseven.macro.lestari.databinding.FragmentCultureBinding
 import com.waterseven.macro.lestari.presentation.home.adapter.CultureAdapter
 

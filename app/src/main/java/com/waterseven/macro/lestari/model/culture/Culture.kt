@@ -1,4 +1,4 @@
-package com.waterseven.macro.lestari.data.dummy.culture
+package com.waterseven.macro.lestari.model.culture
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -10,6 +10,6 @@ data class Culture(
     val place: String,
     val description: String,
     val imageCover: String,
-    val imageAsset: List<String>,
+    val imageAsset: List<ImageCulture>,
     val video: String
 ): Parcelable
