@@ -10,6 +10,6 @@ data class Culture(
     val place: String,
     val description: String,
     val imageCover: String,
-    val imageAsset: List<String>,
+    val imageAsset: List<ImageCulture>,
     val video: String
 ): Parcelable
