@@ -46,4 +46,9 @@ class CultureDetailActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.contentDetail.ytPlayer.release()
+    }
 }

@@ -29,14 +29,25 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         showListCulture()
-        navigateCulture()
+        navigateToCulture()
+        navigateToMuseum()
+    }
+
+    private fun navigateToMuseum() {
+        val action = HomeFragmentDirections.actionHomeFragmentToMuseumFragment()
+
+        binding?.contentHome?.museumCard?.apply {
+            btnExplore.setOnClickListener {
+                findNavController().navigate(action)
+            }
+        }
     }
 
     private fun showListCulture() {
         val cultureData = CulturesData.dummyCultures
 
         val adapter = CultureAdapter { culture ->
-            moveToDetailCulture(culture)
+            navigateToDetailCulture(culture)
         }
 
         binding?.contentHome?.apply {
@@ -48,7 +59,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun navigateCulture() {
+    private fun navigateToCulture() {
         val action = HomeFragmentDirections.actionHomeFragmentToCultureFragment()
 
         binding?.contentHome?.tvCulture?.setOnClickListener {
@@ -56,7 +67,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun moveToDetailCulture(culture: Culture) {
+    private fun navigateToDetailCulture(culture: Culture) {
         val data = HomeFragmentDirections.actionHomeFragmentToCultureDetailActivity(culture)
         findNavController().navigate(data)
     }
