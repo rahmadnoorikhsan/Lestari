@@ -16,4 +16,6 @@
     <string name="image">Gambar</string>
     <string name="video">Video</string>
     <string name="search">Cari</string>
+    <string name="seni">Seni</string>
+    <string name="publisher">%1$s, %2$s</string>
 </resources>

@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_cultureFragment"
             app:destination="@id/cultureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_museumFragment"
+            app:destination="@id/museumFragment" />
     </fragment>
     <fragment
         android:id="@+id/watchFragment"
@@ -49,5 +52,22 @@
         <action
             android:id="@+id/action_cultureFragment_to_cultureDetailActivity"
             app:destination="@id/cultureDetailActivity" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogMuseumFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.museum.DialogMuseumFragment"
+        android:label="DialogMuseumFragment" >
+        <argument
+            android:name="museum"
+            app:argType="com.waterseven.macro.lestari.model.museum.Museum" />
+    </dialog>
+    <fragment
+        android:id="@+id/museumFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.museum.MuseumFragment"
+        android:label="fragment_museum"
+        tools:layout="@layout/fragment_museum" >
+        <action
+            android:id="@+id/action_museumFragment_to_dialogMuseumFragment"
+            app:destination="@id/dialogMuseumFragment" />
     </fragment>
 </navigation>

@@ -1,31 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.chip.ChipGroup xmlns:android="http://schemas.android.com/apk/res/android"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/chips_group"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="16dp"
-    app:singleSelection="true">
+    android:paddingHorizontal="16dp">
 
-    <com.google.android.material.chip.Chip
+    <com.google.android.material.chip.ChipGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/Widget.Material3.Chip.Suggestion"
-        android:textAlignment="center"
-        android:text="@string/traditional_house"/>
+        app:singleSelection="true">
 
-    <com.google.android.material.chip.Chip
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.Material3.Chip.Suggestion"
-        android:textAlignment="center"
-        android:text="@string/traditional_ceremony" />
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Suggestion"
+            android:textAlignment="center"
+            android:text="@string/traditional_house"/>
 
-    <com.google.android.material.chip.Chip
-        android:layout_width="96dp"
-        android:layout_height="wrap_content"
-        style="@style/Widget.Material3.Chip.Suggestion"
-        android:textAlignment="center"
-        android:text="@string/aksara" />
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Suggestion"
+            android:textAlignment="center"
+            android:text="@string/traditional_ceremony"/>
 
-</com.google.android.material.chip.ChipGroup>
+        <com.google.android.material.chip.Chip
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Suggestion"
+            android:textAlignment="center"
+            android:text="@string/aksara"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Suggestion"
+            android:textAlignment="center"
+            android:text="@string/seni"
+            app:rippleColor="@null"/>
+    </com.google.android.material.chip.ChipGroup>
+
+</HorizontalScrollView>
