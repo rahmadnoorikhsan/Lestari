@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
             if (navDestination.id == R.id.homeFragment || navDestination.id == R.id.watchFragment || navDestination.id == R.id.communityFragment || navDestination.id == R.id.profileFragment) {
                 binding.bottomNav.visibility = View.VISIBLE
             } else {
-                binding.bottomNav.visibility = View.GONE
+                binding.bottomNav.apply {
+                    visibility = View.GONE
+                }
             }
         }
 

@@ -1,31 +1,28 @@
 package com.waterseven.macro.lestari.presentation.community
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.waterseven.macro.lestari.data.community.CommunityData
-import com.waterseven.macro.lestari.data.culture.CulturesData
-import com.waterseven.macro.lestari.presentation.community.adapter.RvCommunityAdapter
 import com.waterseven.macro.lestari.databinding.FragmentMyCommunityBinding
 import com.waterseven.macro.lestari.model.community.Community
-import com.waterseven.macro.lestari.presentation.home.adapter.CultureAdapter
-import com.waterseven.macro.lestari.presentation.home.culture.CultureFragmentDirections
+import com.waterseven.macro.lestari.presentation.community.adapter.RvCommunityAdapter
 
 class MyCommunity : Fragment() {
-    private lateinit var binding: FragmentMyCommunityBinding
+    private var _binding: FragmentMyCommunityBinding? = null
+    private val binding get() = _binding
     private lateinit var communityAdapter: RvCommunityAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentMyCommunityBinding.inflate(layoutInflater)
-        return binding.root
+    ): View? {
+        _binding = FragmentMyCommunityBinding.inflate(layoutInflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,13 +30,11 @@ class MyCommunity : Fragment() {
         setUpView()
     }
 
-
-
     private fun setUpView() {
         val communityData = CommunityData.dummyCommunity
 
         communityAdapter = RvCommunityAdapter { community ->
-            val data = CommunityFragmentDirections.actionCommunityFragmentToMyCommunity2(communityData.get(0))
+            val data = CommunityFragmentDirections.actionCommunityFragmentToMyCommunity2(community)
             findNavController().navigate(data)
         }
 
@@ -50,15 +45,16 @@ class MyCommunity : Fragment() {
 
         val communityHasJoin : MutableList<Community> = mutableListOf()
 
-        //menambahkan data ke komunitas saya
        communityData.forEach{
-           if(it.join == true){
+           if(it.join){
                 communityHasJoin.add(it)
            }
        }
         communityAdapter.submitList(communityHasJoin)
-
     }
 
-
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }

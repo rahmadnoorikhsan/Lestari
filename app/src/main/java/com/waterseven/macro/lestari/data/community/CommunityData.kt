@@ -1,19 +1,9 @@
 package com.waterseven.macro.lestari.data.community
 
 import com.waterseven.macro.lestari.model.community.Community
-import com.waterseven.macro.lestari.model.community.ForumCommunity
-import com.waterseven.macro.lestari.model.community.TrainingCommunity
 
-//val image: String,
-//val name: String,
-//val desc : String,
-//val location : String,
-//val forum: List<ForumCommunity>,
-//val trainings: List<TrainingCommunity>,
-//val history: String,
-//val totalMember: Int,
 object CommunityData {
-    val dummyCommunity = listOf<Community>(
+    val dummyCommunity = listOf(
         Community(
             image = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fretnopuspita.com%2Fhome%2F&psig=AOvVaw0cWSKAzZVYPYAU5elh-fEE&ust=1697527754655000&source=images&cd=vfe&opi=89978449&ved=0CBMQjhxqFwoTCNCF0emF-oEDFQAAAAAdAAAAABAD",
             name = "Sanggar Seni Sarwi Retno Budaya",
