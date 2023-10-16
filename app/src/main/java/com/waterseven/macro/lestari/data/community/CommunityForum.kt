@@ -1,6 +1,5 @@
 package com.waterseven.macro.lestari.data.community
 
-import com.waterseven.macro.lestari.model.community.Chat
 import com.waterseven.macro.lestari.model.community.ForumCommunity
 
 object CommunityForum {
@@ -11,6 +10,4 @@ object CommunityForum {
             chats = CommunityChat.dummyCommunityChat
         )
     )
-
-
 }
