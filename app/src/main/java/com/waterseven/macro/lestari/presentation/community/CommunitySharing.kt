@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.waterseven.macro.lestari.R
 import com.waterseven.macro.lestari.adapter.RvCommunityAdapter
 import com.waterseven.macro.lestari.databinding.FragmentCommunitySharingBinding
-import com.waterseven.macro.lestari.databinding.FragmentMyCommunityBinding
 import com.waterseven.macro.lestari.model.community.komunitas
 
 // TODO: Rename parameter arguments, choose names that match

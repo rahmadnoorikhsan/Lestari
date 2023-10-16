@@ -10,47 +10,51 @@ import androidx.fragment.app.Fragment
 import com.waterseven.macro.lestari.R
 import com.waterseven.macro.lestari.databinding.FragmentCommunityBinding
 import androidx.core.content.ContextCompat
+import com.google.android.material.tabs.TabLayout
 
 class CommunityFragment : Fragment() {
 
     private var _binding: FragmentCommunityBinding? = null
     private  val binding get() = _binding
 
-    private lateinit var myCommunity: Button
-    private lateinit var communitySharing: Button
+    private lateinit var myCommunity: TabLayout.Tab
+    private lateinit var communitySharing: TabLayout.Tab
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCommunityBinding.inflate(layoutInflater, container, false)
-        myCommunity = _binding?.myCommunity!!
-        communitySharing = _binding?.communitySharing!!
+        val tabs = binding?.tabs
+        myCommunity = tabs?.getTabAt(0)!!
+        communitySharing = tabs?.getTabAt(1)!!
+        myCommunity.select()
 
-        // Menandai tombol yang akan diaktifkan secara otomatis
-        myCommunity.isSelected = true
-        communitySharing.isSelected = false
-
-        // Panggil fungsi untuk menampilkan fragment yang sesuai
-        if (myCommunity.isSelected) {
+        if(myCommunity.isSelected){
             komunitasSaya()
-        } else {
+        }else{
             cariKomunitas()
         }
 
-        myCommunity.setOnClickListener {
-            komunitasSaya()
-            myCommunity.isSelected = true
-            communitySharing.isSelected = false
-        }
-        communitySharing.setOnClickListener {
-            cariKomunitas()
-            myCommunity.isSelected = false
-            communitySharing.isSelected = true
-        }
+        tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
-        myCommunity.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.bg_text_community))
-        communitySharing.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.bg_text_community))
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                when(tab?.position){
+                    0 -> {
+                        komunitasSaya()
+                    }
+                    1 -> cariKomunitas()
+                }
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                // Handle tab reselect
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                // Handle tab unselect
+            }
+        })
 
         return binding?.root
     }
