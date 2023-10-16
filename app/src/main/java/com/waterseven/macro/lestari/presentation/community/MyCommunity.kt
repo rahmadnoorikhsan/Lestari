@@ -36,10 +36,11 @@ class MyCommunity : Fragment() {
 
 
     private fun setUpView() {
+        //mengambil data dari data model dummy
         val communityData = CommunityData.dummyCommunity
 
         communityAdapter = RvCommunityAdapter { community ->
-            val data = CommunityFragmentDirections.actionCommunityFragmentToMyCommunity2(communityData.get(0))
+            val data = CommunityFragmentDirections.actionCommunityFragmentToMyCommunity2(communityData.toTypedArray())
             findNavController().navigate(data)
         }
 

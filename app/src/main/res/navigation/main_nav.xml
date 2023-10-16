@@ -33,6 +33,9 @@
         <action
             android:id="@+id/action_communityFragment_to_myCommunity2"
             app:destination="@id/myCommunity2" />
+        <action
+            android:id="@+id/action_communityFragment_to_communitySharing"
+            app:destination="@id/communitySharing" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -80,6 +83,15 @@
         android:label="MyCommunity" >
         <argument
             android:name="community"
-            app:argType="com.waterseven.macro.lestari.model.community.Community" />
+            app:argType="com.waterseven.macro.lestari.model.community.Community[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/communitySharing"
+        android:name="com.waterseven.macro.lestari.presentation.community.CommunitySharing"
+        android:label="fragment_community_sharing"
+        tools:layout="@layout/fragment_community_sharing" >
+        <argument
+            android:name="communitySharing"
+            app:argType="com.waterseven.macro.lestari.model.community.Community[]" />
     </fragment>
 </navigation>

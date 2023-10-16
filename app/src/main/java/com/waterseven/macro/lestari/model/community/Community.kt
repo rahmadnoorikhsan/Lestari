@@ -12,6 +12,6 @@ data class Community(
     val forum: List<ForumCommunity>,
     val trainings: List<TrainingCommunity>,
     val history: String,
-    val totalMember: Int,
-    var join : Boolean
+    var join : Boolean,
+    val members: Int
 ):Parcelable

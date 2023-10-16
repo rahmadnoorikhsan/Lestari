@@ -15,7 +15,7 @@ import com.waterseven.macro.lestari.model.community.TrainingCommunity
 object CommunityData {
     val dummyCommunity = listOf<Community>(
         Community(
-            image = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fretnopuspita.com%2Fhome%2F&psig=AOvVaw0cWSKAzZVYPYAU5elh-fEE&ust=1697527754655000&source=images&cd=vfe&opi=89978449&ved=0CBMQjhxqFwoTCNCF0emF-oEDFQAAAAAdAAAAABAD",
+            image = "https://yayasantegehsari.files.wordpress.com/2018/07/b96bb149-8d09-49da-a125-5659ae3ad915-1.jpg",
             name = "Sanggar Seni Sarwi Retno Budaya",
             desc = "Pembelajaran dan pelatihan tari-tarian, teater, dan musik",
             location = "Jl. Bima No. 8 Serengan RT. 04 RW. II, Surakarta",
@@ -29,14 +29,47 @@ object CommunityData {
                    Pada 1997, Sarwi membuka cabang di Danukusuman dengan mengumpulkan anak-anak di daerah sekitarnya.
                     Mulai tahun 2000-an sampai sekarang, sanggar ini mengembangkan materi tembang, teater, dan musik
             """.trimIndent(),
-            totalMember = 0,
-            join = true
+            join = true,
+            members = 50
         ),
         Community(
-            image = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fretnopuspita.com%2Fhome%2F&psig=AOvVaw0cWSKAzZVYPYAU5elh-fEE&ust=1697527754655000&source=images&cd=vfe&opi=89978449&ved=0CBMQjhxqFwoTCNCF0emF-oEDFQAAAAAdAAAAABAD",
-            name = "Sanggar Seni Sarwi Retno Budaya",
-            desc = "Pembelajaran dan pelatihan tari-tarian, teater, dan musik",
-            location = "Jl. Bima No. 8 Serengan RT. 04 RW. II, Surakarta",
+            image = "https://yayasantegehsari.files.wordpress.com/2018/07/b96bb149-8d09-49da-a125-5659ae3ad915-1.jpg",
+            name = "Sanggar Seni Gedhong Kuning",
+            desc = "Kegiatan olah seni dan melestarikan seni tradisi Jawa",
+            location = "Jl. Duku III, Jajar, Kec. Laweyan, Kota Surakarta, Jawa Tengah",
+            forum = CommunityForum.dummyCommunityForum,
+            trainings = CommunityTraining.dummyCommunityTraining,
+            history = """
+                Sanggar Seni Reog Singo Kerti Surakarta Sanggar Seni Reog Singo Kerti merupakan kelompok seni yang turut merawat dan melestarikan salah satu kesenian asal Jawa Timur 
+                yaitu Reog Singo Barong dsan jathilan, Sanggar Seni Reog Singo Kerti sering tampil dalam festival kesenian,
+                 pentas budaya, dan acara tertentu. Kesenian ini lebih dikenal dengan Reog Ponorogo, 
+                 yang merupakan kebudayaan yang berasal dari Jawa Timur. Reog Ponorogo adalah seni tradisional masyarakat Ponorogo 
+                 yang sering dikenal sebagai Barongan. 
+                Tarian ini menampilkan sosok topeng macan berhias bulu merak dengan ukuran yang sangat besar
+            """.trimIndent(),
+            join = false,
+            members = 10
+        ),
+        Community(
+            image = "https://yayasantegehsari.files.wordpress.com/2018/07/b96bb149-8d09-49da-a125-5659ae3ad915-1.jpg",
+            name = "Bengkel Seni Adanu Jumantoro",
+            desc = "Wadah untuk berolah seni yang bersiffat sosial",
+            location = "Jl. Bondan No. 29, RT 3/RW 6, Kemlayan, Serengan, Solo",
+            forum = CommunityForum.dummyCommunityForum,
+            trainings = CommunityTraining.dummyCommunityTraining,
+            history = """
+                Penari yang tergabung dalam Bengkel Seni Adanu Jumantoro berlatih di pendapa Sasono Mulyo, 
+                kompleks Keraton Kasunanan Surakarta Hadiningrat, Surakarta, Jawa Tengah, Rabu (17/3/2021). 
+                Latihan tersebut untuk mempersiapkan penampilan mereka tentang kisah Ramayana dengan judul ”Himanda Adilaga” yang akan disiarkan secara daring.
+            """.trimIndent(),
+            join = false,
+            members = 25
+        ),
+        Community(
+            image = "https://yayasantegehsari.files.wordpress.com/2018/07/b96bb149-8d09-49da-a125-5659ae3ad915-1.jpg",
+            name = "Semarak Candrakirana Art Center",
+            desc = "Kursus dan latihan tari-tarian Jateng, kontemporer, nusantara, dan tari modern",
+            location = "Jalan Kedasih No.22, Kerten, Laweyan, Surakarta",
             forum = CommunityForum.dummyCommunityForum,
             trainings = CommunityTraining.dummyCommunityTraining,
             history = """
@@ -47,8 +80,8 @@ object CommunityData {
                    Pada 1997, Sarwi membuka cabang di Danukusuman dengan mengumpulkan anak-anak di daerah sekitarnya.
                     Mulai tahun 2000-an sampai sekarang, sanggar ini mengembangkan materi tembang, teater, dan musik
             """.trimIndent(),
-            totalMember = 0,
-            join = false
+            join = false,
+            members = 150
         )
     )
 }

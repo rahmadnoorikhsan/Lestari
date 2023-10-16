@@ -33,7 +33,7 @@ class CommunityFragment : Fragment() {
         if(myCommunity.isSelected){
             komunitasSaya()
         }else{
-//            cariKomunitas()
+            cariKomunitas()
         }
 
         tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -43,7 +43,7 @@ class CommunityFragment : Fragment() {
                     0 -> {
                         komunitasSaya()
                     }
-//                    1 -> cariKomunitas()
+                    1 -> cariKomunitas()
                 }
             }
 
@@ -66,12 +66,12 @@ class CommunityFragment : Fragment() {
         transaction.commit()
     }
 
-//    private fun cariKomunitas( ) {
-//        val hasilFragment = CommunitySharing() // Ganti dengan fragment yang sesuai
-//        val transaction = parentFragmentManager.beginTransaction()
-//        transaction.replace(R.id.communityFragmentContainer, hasilFragment)
-//        transaction.commit()
-//    }
+    private fun cariKomunitas( ) {
+        val hasilFragment = CommunitySharing() // Ganti dengan fragment yang sesuai
+        val transaction = parentFragmentManager.beginTransaction()
+        transaction.replace(R.id.communityFragmentContainer, hasilFragment)
+        transaction.commit()
+    }
     
     override fun onDestroyView() {
         super.onDestroyView()

@@ -1,63 +1,82 @@
-//package com.waterseven.macro.lestari.presentation.community
+package com.waterseven.macro.lestari.presentation.community
+
+import android.R
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.SearchView
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.waterseven.macro.lestari.data.community.CommunityData
+import com.waterseven.macro.lestari.databinding.FragmentCommunitySharingBinding
+import com.waterseven.macro.lestari.model.community.Community
+import com.waterseven.macro.lestari.presentation.community.adapter.RvCommunitySharingAdapter
+
+
+class CommunitySharing : Fragment() {
+    private lateinit var binding: FragmentCommunitySharingBinding
+    private lateinit var communitySharingAdapter: RvCommunitySharingAdapter
+    //mengambil data dari data model dummy
+    private val communityData = CommunityData.dummyCommunity
+    private val communityHasJoin : MutableList<Community> = mutableListOf()
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentCommunitySharingBinding.inflate(layoutInflater)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpView()
+    }
+
+    private fun setUpView(){
+        //menampilkan komunitas dengan status join false
+        communityData.forEach{
+            if(it.join == false){
+                communityHasJoin.add(it)
+            }
+        }
+        communitySharingAdapter = RvCommunitySharingAdapter { community ->
+            val data = CommunityFragmentDirections.actionCommunityFragmentToCommunitySharing(
+                communityHasJoin.toTypedArray()
+            )
+            findNavController().navigate(data)
+        }
+
+        binding?.rvCommunitySharing?.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = communitySharingAdapter
+        }
+
+        communitySharingAdapter.submitList(communityHasJoin)
+    }
+
+//    private fun searchCommunity(){
+//        val searchView: SearchView = binding.search
+//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                // Lakukan pencarian data berdasarkan query yang dimasukkan pengguna
+//                return false
+//            }
 //
-//import android.os.Bundle
-//import android.util.Log
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import androidx.fragment.app.Fragment
-//import androidx.recyclerview.widget.LinearLayoutManager
-//import com.waterseven.macro.lestari.R
-//import com.waterseven.macro.lestari.presentation.community.adapter.RvCommunityAdapter
-//import com.waterseven.macro.lestari.databinding.FragmentCommunitySharingBinding
-//import com.waterseven.macro.lestari.model.community.Community
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                // Lakukan aksi saat teks pencarian berubah
+//                // Misalnya, lakukan filtering pada data yang ditampilkan di RecyclerView berdasarkan newText
+//                if(communityHasJoin.forEachIndexed(){ k,v ->
+//                    if(k.)
+//                    }
+//                return false
+//            }
+//        })
 //
-//class CommunitySharing : Fragment() {
-//    private lateinit var binding: FragmentCommunitySharingBinding
-//    private lateinit var adapterKeren: RvCommunityAdapter
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View {
-//        binding = FragmentCommunitySharingBinding.inflate(layoutInflater)
-//        return binding.root
 //    }
-//
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        init()
-//        setRvAdapter()
-//    }
-//    private fun nama_komunitas(): Array<String> = requireContext().resources.getStringArray(R.array.cari_nama_komunitas)
-//    private fun deskripsi_komunitas(): Array<String> = requireContext().resources.getStringArray(R.array.cari_deskripsi_komunitas)
-//
-//    private fun imageWisata(): List<Int> = listOf(
-//        R.drawable.gedong_kuning,
-//        R.drawable.bengkel_seni,
-//        R.drawable.semarak
-//    )
-//
-//    val dataList: MutableList<Community> = mutableListOf()
-//
-//    private fun init() {
-//        adapterKeren = RvCommunityAdapter(dataList)
-//        binding.rvCommunitySharing.layoutManager = LinearLayoutManager(requireContext()) // Mengatur layout manager
-//        binding.rvCommunitySharing.adapter = adapterKeren // Menghubungkan adapter ke RecyclerView
-//    }
-//
-//    private fun setRvAdapter() {
-//
-//        val dataList:MutableList<Community> = mutableListOf()
-//
-//        nama_komunitas().forEachIndexed { index, name ->
-//            dataList.add(Community(imageWisata().get(index),name,deskripsi_komunitas().get(index),"","","" ))
-//        }
-//
-//        Log.d("ISI DATANYA ",dataList.toString())
-//        adapterKeren = RvCommunityAdapter(dataList)
-//        binding.rvCommunitySharing.adapter = adapterKeren
-//
-//    }
-//
-//}
+
+
+
+}
