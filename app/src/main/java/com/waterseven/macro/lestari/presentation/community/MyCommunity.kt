@@ -6,74 +6,59 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.waterseven.macro.lestari.R
-import com.waterseven.macro.lestari.adapter.RvCommunityAdapter
+import com.waterseven.macro.lestari.data.community.CommunityData
+import com.waterseven.macro.lestari.data.culture.CulturesData
+import com.waterseven.macro.lestari.presentation.community.adapter.RvCommunityAdapter
 import com.waterseven.macro.lestari.databinding.FragmentMyCommunityBinding
-import com.waterseven.macro.lestari.model.community.komunitas
+import com.waterseven.macro.lestari.model.community.Community
+import com.waterseven.macro.lestari.presentation.home.adapter.CultureAdapter
+import com.waterseven.macro.lestari.presentation.home.culture.CultureFragmentDirections
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MyCommunity.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MyCommunity : Fragment() {
-    // TODO: Rename and change types of parameters
     private lateinit var binding: FragmentMyCommunityBinding
-    private lateinit var adapterKeren: RvCommunityAdapter
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private lateinit var communityAdapter: RvCommunityAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentMyCommunityBinding.inflate(layoutInflater)
         return binding.root
-        // Inflate the layout for this fragment
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init()
-        setRvAdapter()
-    }
-    private fun nama_komunitas(): Array<String> = requireContext().resources.getStringArray(R.array.nama_komunitas)
-    private fun deskripsi_komunitas(): Array<String> = requireContext().resources.getStringArray(R.array.deskripsi_komunitas)
-
-    private fun imageWisata(): List<Int> = listOf(
-        R.drawable.komunitas1
-    )
-
-    val dataList: MutableList<komunitas> = mutableListOf()
-
-    private fun init() {
-        adapterKeren = RvCommunityAdapter(dataList)
-        binding.rvMyCommunity.layoutManager = LinearLayoutManager(requireContext()) // Mengatur layout manager
-        binding.rvMyCommunity.adapter = adapterKeren // Menghubungkan adapter ke RecyclerView
+        setUpView()
     }
 
-    private fun setRvAdapter() {
 
-        val dataList:MutableList<komunitas> = mutableListOf()
 
-        nama_komunitas().forEachIndexed { index, name ->
-            dataList.add(komunitas(imageWisata().get(index),name,deskripsi_komunitas().get(index),"","","" ))
+    private fun setUpView() {
+        val communityData = CommunityData.dummyCommunity
+
+        communityAdapter = RvCommunityAdapter { community ->
+            val data = CommunityFragmentDirections.actionCommunityFragmentToMyCommunity2(communityData.get(0))
+            findNavController().navigate(data)
         }
 
-        Log.d("ISI DATANYA ",dataList.toString())
-        adapterKeren = RvCommunityAdapter(dataList)
-        binding.rvMyCommunity.adapter = adapterKeren
+        binding?.rvMyCommunity?.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = communityAdapter
+        }
+
+        val communityHasJoin : MutableList<Community> = mutableListOf()
+
+        //menambahkan data ke komunitas saya
+       communityData.forEach{
+           if(it.join == true){
+                communityHasJoin.add(it)
+           }
+       }
+        communityAdapter.submitList(communityHasJoin)
 
     }
-
 
 
 }

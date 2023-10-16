@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.community.CommunityFragment">
 
-
     <ImageView
         android:id="@+id/locate"
         android:layout_width="34dp"
@@ -15,33 +14,30 @@
         android:src="@drawable/location_on"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.027" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
+        android:layout_width="285dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="8dp"
         android:hint="Solo, Jawa Tengah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.572"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintStart_toEndOf="@+id/locate"
+        app:layout_constraintTop_toTopOf="@+id/locate" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
         android:src="@drawable/mode_edit"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toTopOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.005" />
+        app:layout_constraintTop_toTopOf="@+id/editText" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
@@ -72,6 +68,7 @@
         app:layout_constraintVertical_bias="1.0">
 
     </FrameLayout>
+
 
 
 

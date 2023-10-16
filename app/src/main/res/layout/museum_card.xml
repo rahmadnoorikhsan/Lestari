@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="184dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
@@ -21,8 +21,8 @@
                 android:text="@string/digital_museum"
                 android:textAllCaps="true"
                 style="@style/TextAppearance.Material3.TitleLarge"
-                android:layout_marginBottom="16dp"
                 android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
                 android:paddingHorizontal="24dp"
                 app:layout_goneMarginBottom="16dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
             android:textColor="@color/white"
             style="@style/TextAppearance.Material3.BodyMedium"
             android:text="@string/desc_museum"
-            android:layout_marginVertical="16dp"
+            android:layout_marginBottom="8dp"
             android:paddingHorizontal="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/btn_explore"/>

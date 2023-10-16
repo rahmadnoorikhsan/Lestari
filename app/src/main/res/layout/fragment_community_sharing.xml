@@ -7,13 +7,11 @@
     tools:context=".presentation.community.CommunitySharing"
     android:padding="16dp">
 
-
     <com.google.android.material.search.SearchBar
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Cari"
-        android:backgroundTint="@color/md_theme_dark_inverseSurface"
+        android:hint="@string/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -62,6 +60,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chip_group"
         tools:listitem="@layout/card_cari_komunitas" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
