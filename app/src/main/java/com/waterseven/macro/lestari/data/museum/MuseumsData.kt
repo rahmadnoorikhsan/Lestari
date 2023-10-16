@@ -7,7 +7,7 @@ object MuseumsData {
         Museum(
             id = 1,
             name = "Wayang",
-            description = "Wayang adalah seni pertunjukkan tradisional asli Indonesia yang berasal dan berkembang pesat di pulau Jawa dan Bali.",
+            description = "Wayang berasal dari kata \"Ma Hyang\" yang artinya menuju kepada roh spiritual, dewa, atau Tuhan Yang Maha Esa. Ada juga yang mengartikan wayang adalah istilah bahasa Jawa yang bermakna \"bayangan\", hal ini disebabkan karena penonton juga bisa menonton wayang dari belakang kelir atau hanya bayangannya saja.",
             imageUrl = "https://www.artgallery.nsw.gov.au/media/collection_images/1/104.2005%23%23S.jpg",
             creator = "Thea Waddell",
             year = 2005,

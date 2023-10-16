@@ -41,15 +41,20 @@ class CultureFragment : Fragment() {
     }
 
     private fun setUpToolbar() {
-        (activity as AppCompatActivity).setSupportActionBar(binding?.toolbar)
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.culture)
+        (activity as AppCompatActivity).apply {
+            setSupportActionBar(binding?.toolbar)
+            supportActionBar?.apply {
+                setDisplayHomeAsUpEnabled(true)
+                title = getString(R.string.culture)
+            }
+        }
+
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {}
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                requireActivity().onBackPressedDispatcher.onBackPressed()
+                findNavController().navigateUp()
                 return true
             }
         }, viewLifecycleOwner, Lifecycle.State.CREATED)
