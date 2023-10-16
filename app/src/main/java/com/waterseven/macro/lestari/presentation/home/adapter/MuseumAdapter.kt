@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.waterseven.macro.lestari.databinding.ItemMuseumBinding
+import com.waterseven.macro.lestari.databinding.ItemDigitalMuseumBinding
 import com.waterseven.macro.lestari.model.museum.Museum
 import com.waterseven.macro.lestari.utils.Extensions.showImageInto
 
 class MuseumAdapter(val data: (Museum) -> Unit) : ListAdapter<Museum, MuseumAdapter.MuseumViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MuseumViewHolder {
-        val binding = ItemMuseumBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemDigitalMuseumBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MuseumViewHolder(binding)
     }
 
@@ -21,7 +21,7 @@ class MuseumAdapter(val data: (Museum) -> Unit) : ListAdapter<Museum, MuseumAdap
         holder.bind(getItem(position))
     }
 
-    inner class MuseumViewHolder(private val binding: ItemMuseumBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class MuseumViewHolder(private val binding: ItemDigitalMuseumBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(museum: Museum) {
             binding.apply {
                 ivMuseum.showImageInto(itemView.context, museum.imageUrl)

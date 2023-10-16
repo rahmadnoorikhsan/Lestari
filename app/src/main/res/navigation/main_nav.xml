@@ -31,8 +31,8 @@
         android:label="fragment_community"
         tools:layout="@layout/fragment_community" >
         <action
-            android:id="@+id/action_communityFragment_to_myCommunity2"
-            app:destination="@id/myCommunity2" />
+            android:id="@+id/action_communityFragment_to_myCommunity"
+            app:destination="@id/myCommunity" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -75,9 +75,9 @@
             app:destination="@id/dialogMuseumFragment" />
     </fragment>
     <fragment
-        android:id="@+id/myCommunity2"
+        android:id="@+id/myCommunity"
         android:name="com.waterseven.macro.lestari.presentation.community.MyCommunity"
-        android:label="MyCommunity" >
+        android:label="MyCommunity">
         <argument
             android:name="community"
             app:argType="com.waterseven.macro.lestari.model.community.Community" />
