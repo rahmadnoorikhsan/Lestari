@@ -18,4 +18,6 @@
     <string name="search">Cari</string>
     <string name="seni">Seni</string>
     <string name="publisher">%1$s, %2$s</string>
+    <string name="close">Close</string>
+    <string name="back">Kembali</string>
 </resources>
