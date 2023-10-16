@@ -29,7 +29,11 @@
         android:id="@+id/communityFragment"
         android:name="com.waterseven.macro.lestari.presentation.community.CommunityFragment"
         android:label="fragment_community"
-        tools:layout="@layout/fragment_community" />
+        tools:layout="@layout/fragment_community" >
+        <action
+            android:id="@+id/action_communityFragment_to_myCommunity2"
+            app:destination="@id/myCommunity2" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.waterseven.macro.lestari.presentation.profile.ProfileFragment"
@@ -69,5 +73,13 @@
         <action
             android:id="@+id/action_museumFragment_to_dialogMuseumFragment"
             app:destination="@id/dialogMuseumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCommunity2"
+        android:name="com.waterseven.macro.lestari.presentation.community.MyCommunity"
+        android:label="MyCommunity" >
+        <argument
+            android:name="community"
+            app:argType="com.waterseven.macro.lestari.model.community.Community" />
     </fragment>
 </navigation>

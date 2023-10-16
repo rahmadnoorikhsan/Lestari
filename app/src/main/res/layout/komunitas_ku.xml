@@ -15,7 +15,7 @@
         android:layout_height="150dp"
         android:background="#F5F3F7">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/logo"
             android:layout_width="48dp"
             android:layout_height="53dp"
