@@ -34,7 +34,7 @@ class MyCommunity : Fragment() {
         val communityData = CommunityData.dummyCommunity
 
         communityAdapter = RvCommunityAdapter { community ->
-            val data = CommunityFragmentDirections.actionCommunityFragmentToMyCommunity2(community)
+            val data = CommunityFragmentDirections.actionCommunityFragmentToMyCommunity(community)
             findNavController().navigate(data)
         }
 
@@ -46,7 +46,7 @@ class MyCommunity : Fragment() {
         val communityHasJoin : MutableList<Community> = mutableListOf()
 
        communityData.forEach{
-           if(it.join){
+           if(it.join) {
                 communityHasJoin.add(it)
            }
        }
