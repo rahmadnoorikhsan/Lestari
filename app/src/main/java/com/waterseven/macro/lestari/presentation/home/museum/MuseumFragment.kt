@@ -2,20 +2,11 @@ package com.waterseven.macro.lestari.presentation.home.museum
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.MenuHost
-import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.waterseven.macro.lestari.R
 import com.waterseven.macro.lestari.data.museum.MuseumsData
 import com.waterseven.macro.lestari.databinding.FragmentMuseumBinding
 import com.waterseven.macro.lestari.model.museum.Museum
@@ -37,30 +28,14 @@ class MuseumFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setUpToolbar()
+        navigateBack()
         showListMuseum()
     }
 
-
-    private fun setUpToolbar() {
-        (activity as AppCompatActivity).apply {
-            setSupportActionBar(binding?.toolbar)
-            supportActionBar?.apply {
-                setDisplayShowTitleEnabled(false)
-                setHomeAsUpIndicator(ContextCompat.getDrawable(requireActivity(), R.drawable.ic_close_24))
-                setDisplayHomeAsUpEnabled(true)
-            }
+    private fun navigateBack() {
+        binding?.ibBack?.setOnClickListener {
+            findNavController().navigateUp()
         }
-
-        val menuHost: MenuHost = requireActivity()
-        menuHost.addMenuProvider(object : MenuProvider {
-            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {}
-
-            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                findNavController().navigateUp()
-                return true
-            }
-        }, viewLifecycleOwner, Lifecycle.State.CREATED)
     }
 
     private fun showListMuseum() {
