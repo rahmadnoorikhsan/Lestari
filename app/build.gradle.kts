@@ -47,6 +47,7 @@ dependencies {
     //noinspection GradleDependency
     implementation("androidx.core:core-ktx:1.10.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
+    //noinspection GradleDependency
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
@@ -67,4 +68,7 @@ dependencies {
 
     //Youtube API
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
+
+    //View Pager
+    implementation ("androidx.viewpager2:viewpager2:1.0.0")
 }
