@@ -89,5 +89,30 @@
         android:id="@+id/eventFragment"
         android:name="com.waterseven.macro.lestari.presentation.home.information.event.EventFragment"
         android:label="fragment_event"
-        tools:layout="@layout/fragment_event" />
+        tools:layout="@layout/fragment_event" >
+        <action
+            android:id="@+id/action_eventFragment_to_detailShowFragment"
+            app:destination="@id/detailShowFragment" />
+        <action
+            android:id="@+id/action_eventFragment_to_detailCompetitionFragment"
+            app:destination="@id/detailCompetitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailShowFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.information.event.show.DetailShowFragment"
+        android:label="fragment_detail_show"
+        tools:layout="@layout/fragment_detail_show" >
+        <argument
+            android:name="show"
+            app:argType="com.waterseven.macro.lestari.model.show.Show" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCompetitionFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.information.event.competition.DetailCompetitionFragment"
+        android:label="fragment_detail_competition"
+        tools:layout="@layout/fragment_detail_competition" >
+        <argument
+            android:name="competition"
+            app:argType="com.waterseven.macro.lestari.model.competition.Competition" />
+    </fragment>
 </navigation>
