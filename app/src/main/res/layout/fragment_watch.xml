@@ -6,26 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.watch.WatchFragment">
 
-    <ImageView
-        android:id="@+id/iv_video"
-        android:layout_width="match_parent"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
+        android:orientation="vertical"
+        android:background="@color/md_theme_dark_background"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:src="@tools:sample/avatars"
-        android:contentDescription="@string/image" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        style="@style/TextAppearance.Material3.BodySmall"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_video"
-        app:layout_constraintStart_toStartOf="@+id/iv_video"
-        tools:text="Aku cinta budayaku #budaya #papua" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
