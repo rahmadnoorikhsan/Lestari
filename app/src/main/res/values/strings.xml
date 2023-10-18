@@ -29,4 +29,6 @@
     <string name="location">Lokasi</string>
     <string name="competition">Lomba</string>
     <string name="perform">Pentas Seni</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

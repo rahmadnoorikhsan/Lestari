@@ -8,16 +8,19 @@
 
     <ImageButton
         android:id="@+id/arrow_back"
-        android:layout_width="33dp"
-        android:layout_height="40dp"
-        android:src="@drawable/arrow_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/round_button"
+        android:contentDescription="@string/back"
+        android:padding="8dp"
+        android:src="@drawable/ic_navigate_before"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        android:background="@color/white"/>
+        app:layout_constraintVertical_bias="0.004"/>
 
     <ImageView
         android:id="@+id/logo"
@@ -84,8 +87,8 @@
             tools:layout_editor_absoluteY="109dp" />
     </com.google.android.material.tabs.TabLayout>
 
-    <FrameLayout
-        android:id="@+id/detailCommunityFragmentContainer"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerDetailCommunity"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -95,6 +98,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tabs"
         app:layout_constraintVertical_bias="1.0">
 
-    </FrameLayout>
+    </androidx.viewpager2.widget.ViewPager2>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,12 +32,11 @@ class MyCommunity : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setUpView()
     }
-
-
-
     private fun setUpView() {
         //mengambil data dari data model dummy
-        val communityData = CommunityData.dummyCommunity
+        val communityData = CommunityData.dummyCommunity.filter {
+            it.join == true
+        }
 
         communityAdapter = RvCommunityAdapter { community ->
             val data = CommunityFragmentDirections.actionCommunityFragmentToMyCommunity2(communityData.toTypedArray())
@@ -48,16 +47,7 @@ class MyCommunity : Fragment() {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = communityAdapter
         }
-
-        val communityHasJoin : MutableList<Community> = mutableListOf()
-
-        //menambahkan data ke komunitas saya
-       communityData.forEach{
-           if(it.join == true){
-                communityHasJoin.add(it)
-           }
-       }
-        communityAdapter.submitList(communityHasJoin)
+        communityAdapter.submitList(communityData)
 
     }
 

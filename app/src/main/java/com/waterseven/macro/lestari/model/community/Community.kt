@@ -11,7 +11,7 @@ data class Community(
     val name: String = "",
     val desc: String = "",
     val location: String = "",
-    val forum: MutableList<ForumCommunity> = CommunityForum.dummyCommunityForum,
+    val forum: List<ForumCommunity> = CommunityForum.dummyCommunityForum,
     val trainings: List<TrainingCommunity> = CommunityTraining.dummyCommunityTraining,
     val history: String = "",
     var join: Boolean = false,

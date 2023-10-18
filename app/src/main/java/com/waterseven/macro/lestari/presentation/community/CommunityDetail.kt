@@ -1,66 +1,65 @@
 package com.waterseven.macro.lestari.presentation.community
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.waterseven.macro.lestari.R
 import com.waterseven.macro.lestari.databinding.ActivityCommunityDetailBinding
 import com.waterseven.macro.lestari.model.community.Community
+import com.waterseven.macro.lestari.presentation.community.adapter.SectionCommunityPagerAdapter
+import com.waterseven.macro.lestari.presentation.home.adapter.SectionsEventPagerAdapter
+import com.waterseven.macro.lestari.presentation.home.information.event.EventFragment
 
 class CommunityDetail : AppCompatActivity() {
-    private lateinit var logo : ImageView
-    private lateinit var namaKomunitas : TextView
-    private lateinit var total_member : TextView
     private lateinit var tabs : TabLayout
     private lateinit var binding: ActivityCommunityDetailBinding
+    private lateinit var community: Community
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCommunityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val community = intent.getParcelableExtra<Community>("community")
+        community = intent.getParcelableExtra<Community>("community")!!
+
         community?.image?.toIntOrNull()?.let { binding.logo.setImageResource(it) }
         binding.namaKomunitas.setText(community?.name)
         binding.totalMember.setText("${community?.members.toString()} Anggota")
-        tabs = binding.tabs
 
+        setUpViewPager()
 
-        tabs.getTabAt(0)?.select()
-
-        if(tabs.getTabAt(0)?.isSelected!!){
-            replaceFragment(CommunityInfo.newInstance("",""))
-        }else{
+        binding.arrowBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
-
-
-        tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                when(tab?.position){
-                    0 -> replaceFragment(CommunityInfo.newInstance("",""))
-                }
-
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
-            }
-
-        })
     }
 
-    private fun replaceFragment(fragment: Fragment){
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.detailCommunityFragmentContainer, fragment)
-        fragmentTransaction.commit()
+    private fun setUpViewPager() {
+
+        val sectionsCommunityPagerAdapter = SectionCommunityPagerAdapter(this,community)
+
+        binding?.apply {
+            viewPagerDetailCommunity.adapter = sectionsCommunityPagerAdapter
+
+            TabLayoutMediator(tabs, viewPagerDetailCommunity) { tab, position ->
+                tab.icon = resources.getDrawable(TAB_TITLES[position])
+            }.attach()
+        }
+    }
+
+    companion object {
+        @DrawableRes
+        private val TAB_TITLES = intArrayOf(
+            R.drawable.ic_info,
+            R.drawable.ic_forum,
+            R.drawable.ic_pelatihan
+        )
     }
 
 }
