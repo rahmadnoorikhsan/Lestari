@@ -1,5 +1,6 @@
 package com.waterseven.macro.lestari.presentation.community.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -7,8 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.waterseven.macro.lestari.databinding.KomunitasKuBinding
 import com.waterseven.macro.lestari.model.community.Community
-import com.waterseven.macro.lestari.model.culture.Culture
-import com.waterseven.macro.lestari.presentation.home.adapter.CultureAdapter.Companion.DIFF_CALLBACK
+import com.waterseven.macro.lestari.presentation.community.fragment.detail.CommunityDetail
 import com.waterseven.macro.lestari.utils.Extensions.showImageInto
 
 class RvCommunityAdapter(val data: (Community) -> Unit) : ListAdapter<Community, RvCommunityAdapter.CommunityViewHolder>(DIFF_CALLBACK) {
@@ -27,6 +27,8 @@ class RvCommunityAdapter(val data: (Community) -> Unit) : ListAdapter<Community,
                 logo.showImageInto(itemView.context, community.image)
                 tvNamaKomunitas.text = community.name
                 tvDeskripsi.text = community.desc
+                titleForum.text= community.forum.size.toString() + " Forum"
+                titlePelatihan.text = community.trainings.size.toString() + " Pelatihan"
                 itemView.setOnClickListener { data.invoke(community) }
             }
         }

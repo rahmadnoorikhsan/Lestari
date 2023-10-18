@@ -34,8 +34,14 @@
         android:label="fragment_community"
         tools:layout="@layout/fragment_community" >
         <action
-            android:id="@+id/action_communityFragment_to_myCommunity"
-            app:destination="@id/myCommunity" />
+            android:id="@+id/action_communityFragment_to_myCommunity2"
+            app:destination="@id/myCommunity2" />
+        <action
+            android:id="@+id/action_communityFragment_to_communitySharing"
+            app:destination="@id/communitySharing" />
+        <action
+            android:id="@+id/action_communityFragment_to_communityDetailFragment"
+            app:destination="@id/communityDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -78,17 +84,36 @@
             app:destination="@id/dialogMuseumFragment" />
     </fragment>
     <fragment
-        android:id="@+id/myCommunity"
-        android:name="com.waterseven.macro.lestari.presentation.community.MyCommunity"
-        android:label="MyCommunity">
+        android:id="@+id/myCommunity2"
+        android:name="com.waterseven.macro.lestari.presentation.community.fragment.community.MyCommunity"
+        android:label="MyCommunity" >
         <argument
             android:name="community"
-            app:argType="com.waterseven.macro.lestari.model.community.Community" />
+            app:argType="com.waterseven.macro.lestari.model.community.Community[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/communitySharing"
+        android:name="com.waterseven.macro.lestari.presentation.community.fragment.community.CommunitySharing"
+        android:label="fragment_community_sharing"
+        tools:layout="@layout/fragment_community_sharing" >
+        <argument
+            android:name="communitySharing"
+            app:argType="com.waterseven.macro.lestari.model.community.Community[]" />
     </fragment>
     <fragment
         android:id="@+id/eventFragment"
         android:name="com.waterseven.macro.lestari.presentation.home.information.event.EventFragment"
         android:label="fragment_event"
+
+        tools:layout="@layout/fragment_event" />
+    <fragment
+        android:id="@+id/communityDetailFragment"
+        android:name="com.waterseven.macro.lestari.presentation.community.CommunityDetailFragment"
+        android:label="CommunityDetailFragment" >
+        <argument
+            android:name="community"
+            app:argType="com.waterseven.macro.lestari.model.community.Community" />
+
         tools:layout="@layout/fragment_event" >
         <action
             android:id="@+id/action_eventFragment_to_detailShowFragment"

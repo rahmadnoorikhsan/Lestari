@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.community.CommunitySharing"
+    tools:context=".presentation.community.fragment.community.CommunitySharing"
     android:padding="16dp">
 
-    <com.google.android.material.search.SearchBar
+    <SearchView
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/search"
+        android:hint="Cari"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/md_theme_dark_inverseSurface"/>
+
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chip_group"
