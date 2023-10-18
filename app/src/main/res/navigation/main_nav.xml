@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_communityFragment_to_communitySharing"
             app:destination="@id/communitySharing" />
+        <action
+            android:id="@+id/action_communityFragment_to_communityDetailFragment"
+            app:destination="@id/communityDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -103,33 +106,11 @@
         android:label="fragment_event"
         tools:layout="@layout/fragment_event" />
     <fragment
-        android:id="@+id/communityForum"
-        android:name="com.waterseven.macro.lestari.presentation.community.fragment.detail.CommunityForum"
-        android:label="fragment_community_forum"
-        tools:layout="@layout/fragment_community_forum" >
+        android:id="@+id/communityDetailFragment"
+        android:name="com.waterseven.macro.lestari.presentation.community.CommunityDetailFragment"
+        android:label="CommunityDetailFragment" >
         <argument
-            android:name="communityForum"
-            app:argType="com.waterseven.macro.lestari.model.community.Community[]" />
-    </fragment>
-    <fragment
-        android:id="@+id/communityInfo"
-        android:name="com.waterseven.macro.lestari.presentation.community.fragment.detail.CommunityInfo"
-        android:label="fragment_community_info2"
-        tools:layout="@layout/fragment_community_info2" >
-        <argument
-            android:name="communityInfo"
-            app:argType="com.waterseven.macro.lestari.model.community.Community[]" />
-    </fragment>
-    <fragment
-        android:id="@+id/tabsCommunityDetail"
-        android:name="com.waterseven.macro.lestari.presentation.community.fragment.detail.TabsCommunityDetail"
-        android:label="fragment_tabs_community_detail"
-        tools:layout="@layout/fragment_tabs_community_detail" >
-        <action
-            android:id="@+id/action_tabsCommunityDetail_to_communityInfo"
-            app:destination="@id/communityInfo" />
-        <action
-            android:id="@+id/action_tabsCommunityDetail_to_communityForum"
-            app:destination="@id/communityForum" />
+            android:name="community"
+            app:argType="com.waterseven.macro.lestari.model.community.Community" />
     </fragment>
 </navigation>

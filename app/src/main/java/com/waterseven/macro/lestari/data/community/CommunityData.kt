@@ -1,6 +1,8 @@
 package com.waterseven.macro.lestari.data.community
 
+import com.waterseven.macro.lestari.model.community.Chat
 import com.waterseven.macro.lestari.model.community.Community
+import com.waterseven.macro.lestari.model.community.ForumCommunity
 
 object CommunityData {
     val dummyCommunity = listOf(
@@ -9,7 +11,56 @@ object CommunityData {
             name = "Sanggar Seni Sarwi Retno Budaya",
             desc = "Pembelajaran dan pelatihan tari-tarian, teater, dan musik",
             location = "Jl. Bima No. 8 Serengan RT. 04 RW. II, Surakarta",
-            forum = CommunityForum.dummyCommunityForum,
+            forum = listOf(
+                ForumCommunity(
+                    id = 1,
+                    name = "Tari",
+                    chats = listOf(
+                        Chat(
+                            name = "Arif Yoman",
+                            message = "Besok kita mau latihan dimana ya?",
+                            time = "21.00",
+                            image = ""
+                        ),
+                        Chat(
+                            name = "Rafi Paul",
+                            message = "Dimana mana hatiku senang",
+                            time = "21.02",
+                            image = ""
+                        )
+                    )
+                ),
+                ForumCommunity(
+                    id = 2,
+                    name = "Teather",
+                    chats = listOf(
+                        Chat(
+                            name = "Saya",
+                            message = "Jangan becanda terus woi",
+                            time = "21.03",
+                            image = ""
+                        ),
+                        Chat(
+                            name = "Zamir Nashri  ",
+                            message = "Di gedung biasa coy",
+                            time = "21.05",
+                            image = ""
+                        )
+                    )
+                ),
+                ForumCommunity(
+                    id = 3,
+                    name = "Musik",
+                    chats = listOf(
+                        Chat(
+                            name = "Reihna",
+                            message = "Besok aku ijin dulu ya teman-teman, karena masih sakit",
+                            time = "21.10",
+                            image = ""
+                        )
+                    )
+                )
+            ),
             trainings = CommunityTraining.dummyCommunityTraining,
             history = """
                  Sanggar yang didirikan Sarwi pada 24 April 1974 ini beralamat di Jl. Bima No. 8 Serengan RT. 04 RW. II Surakarta.

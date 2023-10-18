@@ -30,10 +30,8 @@ class RvCommunityAdapter(val data: (Community) -> Unit) : ListAdapter<Community,
                 titleForum.text= community.forum.size.toString() + " Forum"
                 titlePelatihan.text = community.trainings.size.toString() + " Pelatihan"
                 itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, CommunityDetail::class.java)
-                    // Kirim data tambahan jika diperlukan
-                    intent.putExtra("community", community)
-                    itemView.context.startActivity(intent)  }
+                    data.invoke(community)
+                }
             }
         }
     }

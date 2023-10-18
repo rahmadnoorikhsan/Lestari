@@ -10,26 +10,22 @@ import com.waterseven.macro.lestari.databinding.ListForumBinding
 import com.waterseven.macro.lestari.model.community.Community
 import com.waterseven.macro.lestari.model.community.ForumCommunity
 import com.waterseven.macro.lestari.model.culture.Culture
+import com.waterseven.macro.lestari.presentation.community.fragment.detail.CommunityForum
 
-class RvCommunityForumAdapter(val data: (Community) -> Unit) : ListAdapter<Community, RvCommunityForumAdapter.CommunityForumViewHolder>(
+class RvCommunityForumAdapter() : ListAdapter<ForumCommunity, RvCommunityForumAdapter.CommunityForumViewHolder>(
     DIFF_CALLBACK
 )  {
 
     inner class CommunityForumViewHolder(private val binding: ListForumBinding): RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(community: Community) {
-
-                val chatMessages = community.forum.map{it.chats}
-                val person = chatMessages.forEach { it.forEach{it.name} }
-                val chat = chatMessages.forEach { it.forEach{it.message} }
+        fun bind(community: ForumCommunity) {
                 binding.apply {
-                namaForum.text = community.name
-                user.text = person.toString()
-                pesanForum.text = chatMessages.toString()
-                itemView.setOnClickListener {
-                        data(community)
+                    namaForum.text = community.name
+                    community.chats.forEach {
+                        user.text = it.name
+                        pesanForum.text = "${ it.message.substring(0, 15) }....."
                     }
-            }
+                    }
         }
     }
 
@@ -43,11 +39,11 @@ class RvCommunityForumAdapter(val data: (Community) -> Unit) : ListAdapter<Commu
     }
 
     companion object {
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Community>() {
-            override fun areItemsTheSame(oldItem: Community, newItem: Community) =
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ForumCommunity>() {
+            override fun areItemsTheSame(oldItem: ForumCommunity, newItem: ForumCommunity) =
                 oldItem == newItem
 
-            override fun areContentsTheSame(oldItem: Community, newItem: Community): Boolean =
+            override fun areContentsTheSame(oldItem: ForumCommunity, newItem: ForumCommunity): Boolean =
                 oldItem == newItem
         }
     }
