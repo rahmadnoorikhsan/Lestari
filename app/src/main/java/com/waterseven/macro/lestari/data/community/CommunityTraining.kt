@@ -3,7 +3,7 @@ package com.waterseven.macro.lestari.data.community
 import com.waterseven.macro.lestari.model.community.TrainingCommunity
 
 object CommunityTraining {
-    val dummyCommunityTraining = listOf<TrainingCommunity>(
+    val dummyCommunityTraining = mutableListOf<TrainingCommunity>(
         TrainingCommunity(
             id= 1,
             name= "Tari"

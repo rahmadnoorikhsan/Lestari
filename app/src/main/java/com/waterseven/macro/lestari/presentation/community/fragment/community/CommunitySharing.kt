@@ -1,26 +1,22 @@
-package com.waterseven.macro.lestari.presentation.community
+package com.waterseven.macro.lestari.presentation.community.fragment.community
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.waterseven.macro.lestari.data.community.CommunityData
 import com.waterseven.macro.lestari.databinding.FragmentCommunitySharingBinding
-import com.waterseven.macro.lestari.model.community.Community
+import com.waterseven.macro.lestari.presentation.community.CommunityFragmentDirections
 import com.waterseven.macro.lestari.presentation.community.adapter.RvCommunitySharingAdapter
 
 
 class CommunitySharing : Fragment() {
     private lateinit var binding: FragmentCommunitySharingBinding
     private lateinit var communitySharingAdapter: RvCommunitySharingAdapter
-    //mengambil data dari data model dummy
-    private val communityData = CommunityData.dummyCommunity
-    private val communityHasJoin : MutableList<Community> = mutableListOf()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,15 +32,15 @@ class CommunitySharing : Fragment() {
     }
 
     private fun setUpView(){
-        //menampilkan komunitas dengan status join false
-        communityData.forEach{
-            if(it.join == false){
-                communityHasJoin.add(it)
-            }
+        //mengambil data dari data model dummy
+        val communityData = CommunityData.dummyCommunity.filter {
+            it.join == false
         }
+        //menampilkan komunitas dengan status join false
+
         communitySharingAdapter = RvCommunitySharingAdapter { community ->
             val data = CommunityFragmentDirections.actionCommunityFragmentToCommunitySharing(
-                communityHasJoin.toTypedArray()
+                communityData.toTypedArray()
             )
             findNavController().navigate(data)
         }
@@ -54,29 +50,6 @@ class CommunitySharing : Fragment() {
             adapter = communitySharingAdapter
         }
 
-        communitySharingAdapter.submitList(communityHasJoin)
+        communitySharingAdapter.submitList(communityData)
     }
-
-//    private fun searchCommunity(){
-//        val searchView: SearchView = binding.search
-//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                // Lakukan pencarian data berdasarkan query yang dimasukkan pengguna
-//                return false
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                // Lakukan aksi saat teks pencarian berubah
-//                // Misalnya, lakukan filtering pada data yang ditampilkan di RecyclerView berdasarkan newText
-//                if(communityHasJoin.forEachIndexed(){ k,v ->
-//                    if(k.)
-//                    }
-//                return false
-//            }
-//        })
-//
-//    }
-
-
-
 }

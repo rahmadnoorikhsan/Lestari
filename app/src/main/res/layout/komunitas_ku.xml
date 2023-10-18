@@ -12,10 +12,10 @@
         android:background="#F5F3F7"
         android:padding="16dp">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/logo"
-            android:layout_width="48dp"
-            android:layout_height="53dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="80dp"
             android:src="@drawable/ic_diversity_2"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             tools:text="Taman Nasional Way Kambas"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,9 +52,9 @@
 
         <ImageView
             android:id="@+id/forum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_width="22dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/ic_forum"
             app:layout_constraintStart_toStartOf="@+id/logo"
             app:layout_constraintTop_toBottomOf="@+id/logo"
@@ -64,10 +65,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            tools:text="3 Forum "
-            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
             app:layout_constraintStart_toEndOf="@+id/forum"
-            app:layout_constraintTop_toTopOf="@+id/forum" />
+            app:layout_constraintTop_toTopOf="@+id/forum"
+            tools:text="3 Forum" />
 
         <ImageView
             android:id="@+id/navigate_next"
@@ -94,11 +96,11 @@
             android:id="@+id/titlePelatihan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            tools:text="3 Pelatihan "
-            android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/pelatihan"
-            app:layout_constraintTop_toTopOf="@+id/pelatihan"/>
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/titleForum"
+            app:layout_constraintTop_toTopOf="@+id/pelatihan"
+            tools:text="3 Pelatihan " />
 
         <ImageView
             android:id="@+id/navigate_next2"
