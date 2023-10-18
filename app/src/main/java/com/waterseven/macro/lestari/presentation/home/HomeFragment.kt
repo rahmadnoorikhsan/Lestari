@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.waterseven.macro.lestari.model.culture.Culture
 import com.waterseven.macro.lestari.data.culture.CulturesData
 import com.waterseven.macro.lestari.databinding.FragmentHomeBinding
+import com.waterseven.macro.lestari.model.culture.Culture
 import com.waterseven.macro.lestari.presentation.home.adapter.CultureAdapter
 
 class HomeFragment : Fragment() {
@@ -28,19 +28,29 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setUpView()
         showListCulture()
-        navigateToCulture()
-        navigateToMuseum()
+    }
+
+    private fun setUpView() {
+        binding?.contentHome?.apply {
+            museumCard.btnExplore.setOnClickListener {
+                navigateToMuseum()
+            }
+            tvCulture.setOnClickListener {
+                navigateToCulture()
+            }
+            informationCard.apply {
+                btnEvent.setOnClickListener {
+                    navigateToEvent()
+                }
+            }
+        }
     }
 
     private fun navigateToMuseum() {
         val action = HomeFragmentDirections.actionHomeFragmentToMuseumFragment()
-
-        binding?.contentHome?.museumCard?.apply {
-            btnExplore.setOnClickListener {
-                findNavController().navigate(action)
-            }
-        }
+        findNavController().navigate(action)
     }
 
     private fun showListCulture() {
@@ -61,15 +71,17 @@ class HomeFragment : Fragment() {
 
     private fun navigateToCulture() {
         val action = HomeFragmentDirections.actionHomeFragmentToCultureFragment()
-
-        binding?.contentHome?.tvCulture?.setOnClickListener {
-            findNavController().navigate(action)
-        }
+        findNavController().navigate(action)
     }
 
     private fun navigateToDetailCulture(culture: Culture) {
         val data = HomeFragmentDirections.actionHomeFragmentToCultureDetailActivity(culture)
         findNavController().navigate(data)
+    }
+
+    private fun navigateToEvent() {
+        val action = HomeFragmentDirections.actionHomeFragmentToEventFragment()
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {

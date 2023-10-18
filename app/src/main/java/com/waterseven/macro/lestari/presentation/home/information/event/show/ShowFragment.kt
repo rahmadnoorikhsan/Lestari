@@ -1,22 +1,22 @@
-package com.waterseven.macro.lestari.presentation.home.information
+package com.waterseven.macro.lestari.presentation.home.information.event.show
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.waterseven.macro.lestari.databinding.FragmentEventBinding
+import com.waterseven.macro.lestari.databinding.FragmentShowBinding
 
-class EventFragment : Fragment() {
+class ShowFragment : Fragment() {
 
-    private var _binding: FragmentEventBinding? = null
+    private var _binding: FragmentShowBinding? = null
     private val binding get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentEventBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentShowBinding.inflate(layoutInflater, container, false)
         return binding?.root
     }
 

@@ -28,4 +28,6 @@
     <string name="edit">Ubah</string>
     <string name="location">Lokasi</string>
     <string name="name">Name</string>
+    <string name="competition">Lomba</string>
+    <string name="perform">Pentas Seni</string>
 </resources>

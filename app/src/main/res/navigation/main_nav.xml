@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_museumFragment"
             app:destination="@id/museumFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_eventFragment"
+            app:destination="@id/eventFragment" />
     </fragment>
     <fragment
         android:id="@+id/watchFragment"
@@ -82,4 +85,9 @@
             android:name="community"
             app:argType="com.waterseven.macro.lestari.model.community.Community" />
     </fragment>
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.information.event.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" />
 </navigation>

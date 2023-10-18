@@ -9,14 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="72dp">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_event"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:text="@string/event"
-            android:gravity="center_vertical"
-            android:drawableStart="@drawable/ic_event"
-            android:drawablePadding="8dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            app:icon="@drawable/ic_event"
+            app:iconTint="@color/black"
+            app:iconGravity="textStart"
             style="@style/TextAppearance.Material3.BodyMedium"
+            android:background="@android:color/transparent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -32,13 +36,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_article"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:text="@string/article"
-            android:gravity="center_vertical"
-            android:drawableStart="@drawable/ic_article"
-            android:drawablePadding="8dp"
+            android:background="@android:color/transparent"
+            app:icon="@drawable/ic_article"
+            app:iconTint="@color/black"
+            app:iconGravity="textStart"
             style="@style/TextAppearance.Material3.BodyMedium"
             app:layout_constraintStart_toStartOf="@+id/divider"
             app:layout_constraintTop_toTopOf="parent"
