@@ -1,17 +1,15 @@
-package com.waterseven.macro.lestari.presentation.community
+package com.waterseven.macro.lestari.presentation.community.fragment.community
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.waterseven.macro.lestari.data.community.CommunityData
 import com.waterseven.macro.lestari.databinding.FragmentCommunitySharingBinding
-import com.waterseven.macro.lestari.model.community.Community
+import com.waterseven.macro.lestari.presentation.community.CommunityFragmentDirections
 import com.waterseven.macro.lestari.presentation.community.adapter.RvCommunitySharingAdapter
 
 

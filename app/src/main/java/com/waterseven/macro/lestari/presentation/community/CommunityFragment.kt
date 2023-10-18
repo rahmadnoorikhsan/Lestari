@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import com.waterseven.macro.lestari.R
 import com.waterseven.macro.lestari.databinding.FragmentCommunityBinding
+import com.waterseven.macro.lestari.presentation.community.fragment.community.CommunitySharing
+import com.waterseven.macro.lestari.presentation.community.fragment.community.MyCommunity
 
 class CommunityFragment : Fragment() {
 

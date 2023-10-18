@@ -1,4 +1,4 @@
-package com.waterseven.macro.lestari.presentation.community
+package com.waterseven.macro.lestari.presentation.community.fragment.detail
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +18,6 @@ import com.waterseven.macro.lestari.presentation.home.adapter.SectionsEventPager
 import com.waterseven.macro.lestari.presentation.home.information.event.EventFragment
 
 class CommunityDetail : AppCompatActivity() {
-    private lateinit var tabs : TabLayout
     private lateinit var binding: ActivityCommunityDetailBinding
     private lateinit var community: Community
 
@@ -33,33 +32,9 @@ class CommunityDetail : AppCompatActivity() {
         binding.namaKomunitas.setText(community?.name)
         binding.totalMember.setText("${community?.members.toString()} Anggota")
 
-        setUpViewPager()
 
         binding.arrowBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
     }
-
-    private fun setUpViewPager() {
-
-        val sectionsCommunityPagerAdapter = SectionCommunityPagerAdapter(this,community)
-
-        binding?.apply {
-            viewPagerDetailCommunity.adapter = sectionsCommunityPagerAdapter
-
-            TabLayoutMediator(tabs, viewPagerDetailCommunity) { tab, position ->
-                tab.icon = resources.getDrawable(TAB_TITLES[position])
-            }.attach()
-        }
-    }
-
-    companion object {
-        @DrawableRes
-        private val TAB_TITLES = intArrayOf(
-            R.drawable.ic_info,
-            R.drawable.ic_forum,
-            R.drawable.ic_pelatihan
-        )
-    }
-
 }

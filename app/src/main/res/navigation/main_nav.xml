@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/myCommunity2"
-        android:name="com.waterseven.macro.lestari.presentation.community.MyCommunity"
+        android:name="com.waterseven.macro.lestari.presentation.community.fragment.community.MyCommunity"
         android:label="MyCommunity" >
         <argument
             android:name="community"
@@ -90,7 +90,7 @@
     </fragment>
     <fragment
         android:id="@+id/communitySharing"
-        android:name="com.waterseven.macro.lestari.presentation.community.CommunitySharing"
+        android:name="com.waterseven.macro.lestari.presentation.community.fragment.community.CommunitySharing"
         android:label="fragment_community_sharing"
         tools:layout="@layout/fragment_community_sharing" >
         <argument
@@ -102,4 +102,34 @@
         android:name="com.waterseven.macro.lestari.presentation.home.information.event.EventFragment"
         android:label="fragment_event"
         tools:layout="@layout/fragment_event" />
+    <fragment
+        android:id="@+id/communityForum"
+        android:name="com.waterseven.macro.lestari.presentation.community.fragment.detail.CommunityForum"
+        android:label="fragment_community_forum"
+        tools:layout="@layout/fragment_community_forum" >
+        <argument
+            android:name="communityForum"
+            app:argType="com.waterseven.macro.lestari.model.community.Community[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityInfo"
+        android:name="com.waterseven.macro.lestari.presentation.community.fragment.detail.CommunityInfo"
+        android:label="fragment_community_info2"
+        tools:layout="@layout/fragment_community_info2" >
+        <argument
+            android:name="communityInfo"
+            app:argType="com.waterseven.macro.lestari.model.community.Community[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabsCommunityDetail"
+        android:name="com.waterseven.macro.lestari.presentation.community.fragment.detail.TabsCommunityDetail"
+        android:label="fragment_tabs_community_detail"
+        tools:layout="@layout/fragment_tabs_community_detail" >
+        <action
+            android:id="@+id/action_tabsCommunityDetail_to_communityInfo"
+            app:destination="@id/communityInfo" />
+        <action
+            android:id="@+id/action_tabsCommunityDetail_to_communityForum"
+            app:destination="@id/communityForum" />
+    </fragment>
 </navigation>

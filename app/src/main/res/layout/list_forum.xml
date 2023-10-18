@@ -25,13 +25,22 @@
             app:layout_constraintVertical_bias="0.222" />
 
         <TextView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Reihna : "
+            app:layout_constraintStart_toStartOf="@+id/namaForum"
+            app:layout_constraintTop_toBottomOf="@+id/namaForum" />
+
+        <TextView
             android:id="@+id/pesanForum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Reihna : Besok aku ijin dul..."
-            app:layout_constraintStart_toStartOf="@+id/namaForum"
-            app:layout_constraintTop_toBottomOf="@+id/namaForum" />
+            android:layout_marginStart="20dp"
+            android:text="Besok aku ijin dul..."
+            app:layout_constraintStart_toEndOf="@+id/user"
+            app:layout_constraintTop_toTopOf="@+id/user" />
 
         <ImageButton
             android:id="@+id/btn_next"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.community.CommunityDetail">
+    tools:context=".presentation.community.fragment.detail.CommunityDetail">
 
     <ImageButton
         android:id="@+id/arrow_back"
@@ -54,50 +54,17 @@
         app:layout_constraintStart_toStartOf="@+id/namaKomunitas"
         app:layout_constraintTop_toBottomOf="@+id/namaKomunitas" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabs"
+    <FrameLayout
+        android:id="@+id/tabs_container_community_detail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="7dp"
+        android:layout_height="673dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/total_member"
-        app:tabMode="fixed"
-        android:background="#FAF9FD">
+        tools:layout_editor_absoluteX="-16dp">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_info"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="109dp" />
+        <include android:id="@+id/content_detail"
+            layout="@layout/fragment_tabs_community_detail"/>
+    </FrameLayout>
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_forum_"
-            tools:layout_editor_absoluteX="137dp"
-            tools:layout_editor_absoluteY="109dp" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_pelatihan"
-            tools:layout_editor_absoluteX="274dp"
-            tools:layout_editor_absoluteY="109dp" />
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPagerDetailCommunity"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabs"
-        app:layout_constraintVertical_bias="1.0">
-
-    </androidx.viewpager2.widget.ViewPager2>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

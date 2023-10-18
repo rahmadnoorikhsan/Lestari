@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Lestari"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.community.CommunityDetail"
+            android:name=".presentation.community.fragment.detail.CommunityDetail"
             android:exported="false" />
         <activity
             android:name=".presentation.home.culture.CultureDetailActivity"
