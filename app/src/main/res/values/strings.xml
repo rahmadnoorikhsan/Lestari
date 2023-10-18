@@ -20,4 +20,29 @@
     <string name="publisher">%1$s, %2$s</string>
     <string name="close">Close</string>
     <string name="back">Kembali</string>
+    <string name="my_profile">Profil Saya</string>
+    <string name="privasi">Privasi</string>
+    <string name="setting">Pengaturan</string>
+    <string name="logout">Keluar</string>
+    <string name="profile_picture">Foto Profile</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="email_profil">Email</string>
+    <string name="number_call">No. Telepon</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update">Perbarui</string>
+    <string name="address">Alamat</string>
+    <string name="Name">Alea Piraxy</string>
+    <string name="gmail">aleaapiraxy@gmail.com</string>
+    <string name="number">082165328712</string>
+    <string name="full_address">Jl. Jendral Sudirman No. 2 Komplek Balaikota SurakartaKelurahan Kampung Baru, Kecamatan Pasar Kliwon, Kota Surakarta</string>
+    <string name="language">Bahasa</string>
+    <string name="notification">Notifikasi</string>
+    <string name="night_mode">Mode Gelap</string>
+    <string name="service">Hubungi Kami</string>
+    <string name="call">1216-1839-00</string>
+    <string name="email">lestariofficial@gmail.com</string>
+    <string name="whatsapp">Whatsapp</string>
+
+
 </resources>
