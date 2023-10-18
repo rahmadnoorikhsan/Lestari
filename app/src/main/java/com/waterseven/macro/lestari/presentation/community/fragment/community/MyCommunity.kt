@@ -37,6 +37,7 @@ class MyCommunity : Fragment() {
         communityAdapter = RvCommunityAdapter { community ->
             val data =
                 CommunityFragmentDirections.actionCommunityFragmentToCommunityDetailFragment(community)
+
             findNavController().navigate(data)
         }
 

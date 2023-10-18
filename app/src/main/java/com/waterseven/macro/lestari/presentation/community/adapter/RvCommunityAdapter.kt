@@ -29,9 +29,7 @@ class RvCommunityAdapter(val data: (Community) -> Unit) : ListAdapter<Community,
                 tvDeskripsi.text = community.desc
                 titleForum.text= community.forum.size.toString() + " Forum"
                 titlePelatihan.text = community.trainings.size.toString() + " Pelatihan"
-                itemView.setOnClickListener {
-                    data.invoke(community)
-                }
+                itemView.setOnClickListener { data.invoke(community) }
             }
         }
     }
