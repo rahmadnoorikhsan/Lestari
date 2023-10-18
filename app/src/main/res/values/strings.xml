@@ -28,8 +28,6 @@
     <string name="full_name">Nama Lengkap</string>
     <string name="email_profil">Email</string>
     <string name="number_call">No. Telepon</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="update">Perbarui</string>
     <string name="address">Alamat</string>
     <string name="Name">Alea Piraxy</string>
@@ -43,6 +41,14 @@
     <string name="call">1216-1839-00</string>
     <string name="email">lestariofficial@gmail.com</string>
     <string name="whatsapp">Whatsapp</string>
-
-
+    <string name="forum">Forum</string>
+    <string name="logo">Logo</string>
+    <string name="training">Pelatihan</string>
+    <string name="enter">Enter</string>
+    <string name="solo_jawa_tengah">Solo, Jawa Tengah</string>
+    <string name="edit">Ubah</string>
+    <string name="location">Lokasi</string>
+    <string name="name">Name</string>
+    <string name="competition">Lomba</string>
+    <string name="perform">Pentas Seni</string>
 </resources>

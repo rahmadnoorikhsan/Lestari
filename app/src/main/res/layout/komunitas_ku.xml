@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="20dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
-
-
+    style="@style/Widget.Material3.CardView.Elevated">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#F5F3F7">
+        android:layout_height="match_parent"
+        android:background="#F5F3F7"
+        android:padding="16dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/logo"
             android:layout_width="48dp"
             android:layout_height="53dp"
@@ -24,7 +21,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.049"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/logo" />
 
         <TextView
             android:id="@+id/tvNamaKomunitas"
@@ -58,7 +56,8 @@
             android:layout_marginTop="12dp"
             android:src="@drawable/ic_forum"
             app:layout_constraintStart_toStartOf="@+id/logo"
-            app:layout_constraintTop_toBottomOf="@+id/logo" />
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            android:contentDescription="@string/forum" />
 
         <TextView
             android:id="@+id/titleForum"
@@ -78,7 +77,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.923"
             app:layout_constraintStart_toEndOf="@+id/titleForum"
-            app:layout_constraintTop_toTopOf="@+id/titleForum" />
+            app:layout_constraintTop_toTopOf="@+id/titleForum"
+            android:contentDescription="@string/enter" />
 
         <ImageView
             android:id="@+id/pelatihan"
@@ -87,7 +87,8 @@
             android:layout_marginTop="12dp"
             android:src="@drawable/ic_pelatihan"
             app:layout_constraintStart_toStartOf="@+id/forum"
-            app:layout_constraintTop_toBottomOf="@+id/forum" />
+            app:layout_constraintTop_toBottomOf="@+id/forum"
+            android:contentDescription="@string/training" />
 
         <TextView
             android:id="@+id/titlePelatihan"
@@ -108,7 +109,7 @@
             app:layout_constraintHorizontal_bias="0.923"
             app:layout_constraintStart_toEndOf="@+id/titlePelatihan"
             app:layout_constraintTop_toTopOf="@+id/titlePelatihan"
-            android:contentDescription="" />
+            android:contentDescription="@string/enter" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
