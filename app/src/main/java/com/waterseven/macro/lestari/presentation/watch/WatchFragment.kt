@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.waterseven.macro.lestari.data.watch.WatchData
 import com.waterseven.macro.lestari.databinding.FragmentWatchBinding
+import com.waterseven.macro.lestari.presentation.watch.adapter.WatchAdapter
 
 class WatchFragment : Fragment() {
 
@@ -18,6 +20,20 @@ class WatchFragment : Fragment() {
     ): View? {
         _binding = FragmentWatchBinding.inflate(layoutInflater, container, false)
         return binding?.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpView()
+    }
+
+    private fun setUpView() {
+        val watch = WatchData.dummyWatch
+        val watchAdapter = WatchAdapter()
+
+        watchAdapter.submitList(watch)
+        binding?.viewPager?.adapter = watchAdapter
     }
 
     override fun onDestroyView() {
