@@ -5,7 +5,7 @@ import com.waterseven.macro.lestari.model.community.Community
 import com.waterseven.macro.lestari.model.community.ForumCommunity
 
 object CommunityData {
-    val dummyCommunity = listOf(
+    val dummyCommunity = mutableListOf<Community>(
         Community(
             image = "https://yayasantegehsari.files.wordpress.com/2018/07/b96bb149-8d09-49da-a125-5659ae3ad915-1.jpg",
             name = "Sanggar Seni Sarwi Retno Budaya",
