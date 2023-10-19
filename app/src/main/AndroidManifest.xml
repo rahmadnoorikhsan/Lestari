@@ -17,6 +17,7 @@
         <activity
             android:name=".presentation.auth.SignInActivity"
             android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,22 +25,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.auth.RagisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.community.fragment.detail.CommunityDetail"
+            android:name=".presentation.auth.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.home.culture.CultureDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.auth.AuthActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true" >
         </activity>
     </application>
-
-
 </manifest>

@@ -28,24 +28,23 @@ class CommunitySharing : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         setUpView()
     }
 
     private fun setUpView(){
-        //mengambil data dari data model dummy
         val communityData = CommunityData.dummyCommunity.filter {
-            it.join == false
+            !it.join
         }
-        //menampilkan komunitas dengan status join false
 
         communitySharingAdapter = RvCommunitySharingAdapter { community ->
-            val data = CommunityFragmentDirections.actionCommunityFragmentToCommunitySharing(
-                communityData.toTypedArray()
+            val data = CommunityFragmentDirections.actionCommunityFragmentToCommunityDetailFragment(
+                community
             )
             findNavController().navigate(data)
         }
 
-        binding?.rvCommunitySharing?.apply {
+        binding.rvCommunitySharing.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = communitySharingAdapter
         }

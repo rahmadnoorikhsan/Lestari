@@ -4,19 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.community.fragment.community.CommunitySharing"
-    android:padding="16dp">
+    tools:context=".presentation.community.fragment.community.CommunitySharing">
 
-    <SearchView
+    <com.google.android.material.search.SearchBar
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Cari"
+        android:hint="@string/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/md_theme_dark_inverseSurface"/>
-
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chip_group"
@@ -28,30 +26,24 @@
         app:layout_constraintTop_toBottomOf="@+id/search">
         <com.google.android.material.chip.Chip
             android:id="@+id/chip"
-            android:layout_width="wrap_content"
+            android:layout_width="92dp"
             android:layout_height="wrap_content"
-            android:text="tari"
-             />
+            android:text="@string/dance"
+            android:textAlignment="center"/>
         <com.google.android.material.chip.Chip
             android:id="@+id/chip1"
-            android:layout_width="wrap_content"
+            android:layout_width="92dp"
             android:layout_height="wrap_content"
-            android:text="tari"
-            />
+            android:text="@string/music"
+            android:textAlignment="center" />
         <com.google.android.material.chip.Chip
             android:id="@+id/chip2"
-            android:layout_width="wrap_content"
+            android:layout_width="92dp"
             android:layout_height="wrap_content"
-            android:text="tari"
-            />
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="tari"
+            android:text="@string/batik"
+            android:textAlignment="center"
             />
     </com.google.android.material.chip.ChipGroup>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_communitySharing"

@@ -3,7 +3,7 @@ package com.waterseven.macro.lestari.data.community
 import com.waterseven.macro.lestari.model.community.Chat
 
 object CommunityChat {
-    val dummyCommunityChat = mutableListOf<Chat>(
+    val dummyCommunityChat = listOf<Chat>(
         Chat(
             name = "Arif Yoman",
             message = "Besok kita mau latihan dimana ya?",

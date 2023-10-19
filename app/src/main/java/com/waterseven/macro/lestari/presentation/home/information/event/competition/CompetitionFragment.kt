@@ -34,8 +34,7 @@ class CompetitionFragment : Fragment() {
     private fun setUpRecycleView() {
         val competitionData = CompetitionData.dummyCompetition
         competitionAdapter = CompetitionAdapter { competition ->
-            val action =
-                EventFragmentDirections.actionEventFragmentToDetailCompetitionFragment(competition)
+            val action = EventFragmentDirections.actionEventFragmentToDetailCompetitionFragment(competition)
             findNavController().navigate(action)
         }
 

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.community.fragment.detail.CommunityDetail">
+    android:layout_height="match_parent">
 
     <ImageButton
         android:id="@+id/arrow_back"
@@ -15,31 +13,26 @@
         android:contentDescription="@string/back"
         android:padding="8dp"
         android:src="@drawable/ic_navigate_before"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="43dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="268dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
         android:src="@drawable/komunitas1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toEndOf="@+id/arrow_back"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/arrow_back"
+        android:contentDescription="@string/logo" />
 
     <TextView
         android:id="@+id/namaKomunitas"
-        android:layout_width="229dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Sanggar Seni Sarwi Retno Budaya"
+        android:text="@string/sanggar_seni_sarwi_retno_budaya"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/logo"
@@ -49,17 +42,16 @@
         android:id="@+id/total_member"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="50 Anggota"
+        android:text="@string/_50_anggota"
         app:layout_constraintStart_toStartOf="@+id/namaKomunitas"
         app:layout_constraintTop_toBottomOf="@+id/namaKomunitas" />
-
 
         <include
             android:id="@+id/content_detail"
             app:layout_constraintTop_toBottomOf="@+id/total_member"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

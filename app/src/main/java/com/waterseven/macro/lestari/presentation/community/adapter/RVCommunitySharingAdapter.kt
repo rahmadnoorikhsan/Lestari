@@ -2,12 +2,12 @@ package com.waterseven.macro.lestari.presentation.community.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.waterseven.macro.lestari.databinding.CardCariKomunitasBinding
 import com.waterseven.macro.lestari.model.community.Community
-import com.waterseven.macro.lestari.presentation.home.adapter.CultureAdapter.Companion.DIFF_CALLBACK
 import com.waterseven.macro.lestari.utils.Extensions.showImageInto
 
 class RvCommunitySharingAdapter(val data: (Community) -> Unit) : ListAdapter<Community, RvCommunitySharingAdapter.CommunitySharingViewHolder>(DIFF_CALLBACK) {
@@ -28,9 +28,11 @@ class RvCommunitySharingAdapter(val data: (Community) -> Unit) : ListAdapter<Com
                 namaKomunitas.text = community.name
                 deskripsiKomunitas.text = community.desc
                 alamatKomunitas.text = community.location
-                totalMember.text = "${community.members.toString()} anggota • "
-                totalPelatihan.text = "${community.trainings.size.toString()} pelatihan"
+                info.text = "${community.members} Member • ${community.trainings.size} Pelatihan"
                 itemView.setOnClickListener {data.invoke(community)}
+                btnJoin.setOnClickListener {
+                    Toast.makeText(itemView.context, "Fitur ini sedang dalam tahap pengembangan", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

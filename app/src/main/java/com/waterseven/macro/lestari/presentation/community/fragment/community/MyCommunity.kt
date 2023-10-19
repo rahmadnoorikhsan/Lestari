@@ -29,9 +29,8 @@ class MyCommunity : Fragment() {
         setUpView()
     }
     private fun setUpView() {
-        //mengambil data dari data model dummy
         val communityData = CommunityData.dummyCommunity.filter {
-            it.join == true
+            it.join
         }
 
         communityAdapter = RvCommunityAdapter { community ->
@@ -41,7 +40,7 @@ class MyCommunity : Fragment() {
             findNavController().navigate(data)
         }
 
-        binding?.rvMyCommunity?.apply {
+        binding.rvMyCommunity.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = communityAdapter
         }

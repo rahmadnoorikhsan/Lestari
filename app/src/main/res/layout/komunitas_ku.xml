@@ -9,7 +9,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F5F3F7"
         android:padding="16dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -52,8 +51,8 @@
 
         <ImageView
             android:id="@+id/forum"
-            android:layout_width="22dp"
-            android:layout_height="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_forum"
             app:layout_constraintStart_toStartOf="@+id/logo"
@@ -64,12 +63,13 @@
             android:id="@+id/titleForum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:text="@string/_3_forum"
+            style="@style/TextAppearance.Material3.BodyMedium"
             app:layout_constraintStart_toEndOf="@+id/forum"
             app:layout_constraintTop_toTopOf="@+id/forum"
-            tools:text="3 Forum" />
+            app:layout_constraintBottom_toBottomOf="@+id/forum"/>
 
         <ImageView
             android:id="@+id/navigate_next"
@@ -77,10 +77,9 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.923"
-            app:layout_constraintStart_toEndOf="@+id/titleForum"
             app:layout_constraintTop_toTopOf="@+id/titleForum"
-            android:contentDescription="@string/enter" />
+            android:contentDescription="@string/enter"
+            app:tint="@color/black" />
 
         <ImageView
             android:id="@+id/pelatihan"
@@ -97,10 +96,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:text="@string/_3_pelatihan"
             app:layout_constraintStart_toStartOf="@+id/titleForum"
             app:layout_constraintTop_toTopOf="@+id/pelatihan"
-            tools:text="3 Pelatihan " />
+            app:layout_constraintBottom_toBottomOf="@+id/pelatihan"/>
 
         <ImageView
             android:id="@+id/navigate_next2"
@@ -108,10 +108,9 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.923"
-            app:layout_constraintStart_toEndOf="@+id/titlePelatihan"
             app:layout_constraintTop_toTopOf="@+id/titlePelatihan"
-            android:contentDescription="@string/enter" />
+            android:contentDescription="@string/enter"
+            app:tint="@color/black" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

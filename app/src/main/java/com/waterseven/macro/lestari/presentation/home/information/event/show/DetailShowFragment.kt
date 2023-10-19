@@ -7,6 +7,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
@@ -68,9 +69,12 @@ class DetailShowFragment : Fragment() {
             tvTitle.text = show.title
             tvDate.text = getString(R.string.date, show.date)
             tvTime.text = getString(R.string.time, show.time)
-            tvLocation.text = getString(R.string.locations, show.location)
+            tvLocation.text = getString(R.string.location_arg, show.location)
             tvActor.text = getString(R.string.actor, show.actor)
             tvDescription.text = show.description
+            btnNotification.setOnClickListener {
+                Toast.makeText(requireActivity(), "Pengingat pada event ini telah aktif", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

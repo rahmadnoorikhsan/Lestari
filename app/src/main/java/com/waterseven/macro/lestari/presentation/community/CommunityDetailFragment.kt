@@ -15,7 +15,7 @@ import com.waterseven.macro.lestari.presentation.community.adapter.SectionsCommu
 class CommunityDetailFragment : Fragment() {
     private var _binding : FragmentCommunityDetailBinding? = null
     private val binding get() = _binding
-    private val navArgs:CommunityDetailFragmentArgs by navArgs()
+    private val navArgs: CommunityDetailFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

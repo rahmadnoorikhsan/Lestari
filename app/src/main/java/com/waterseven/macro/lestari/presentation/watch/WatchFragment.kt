@@ -33,7 +33,9 @@ class WatchFragment : Fragment() {
         val watchAdapter = WatchAdapter()
 
         watchAdapter.submitList(watch)
-        binding?.viewPager?.adapter = watchAdapter
+        binding?.apply {
+            viewPager.adapter = watchAdapter
+        }
     }
 
     override fun onDestroyView() {

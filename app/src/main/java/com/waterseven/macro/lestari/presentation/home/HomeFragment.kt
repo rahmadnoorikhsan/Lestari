@@ -44,8 +44,26 @@ class HomeFragment : Fragment() {
                 btnEvent.setOnClickListener {
                     navigateToEvent()
                 }
+                btnArticle.setOnClickListener {
+                    navigateToArticle()
+                }
+            }
+            topBar.apply {
+                ibNotification.setOnClickListener {
+                    navigateToNotification()
+                }
             }
         }
+    }
+
+    private fun navigateToNotification() {
+        val action = HomeFragmentDirections.actionHomeFragmentToNotificationFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToArticle() {
+        val action = HomeFragmentDirections.actionHomeFragmentToArticleFragment()
+        findNavController().navigate(action)
     }
 
     private fun navigateToMuseum() {
@@ -83,6 +101,8 @@ class HomeFragment : Fragment() {
         val action = HomeFragmentDirections.actionHomeFragmentToEventFragment()
         findNavController().navigate(action)
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

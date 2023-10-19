@@ -7,6 +7,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
@@ -68,9 +69,12 @@ class DetailCompetitionFragment: Fragment() {
             tvTitle.text = competition.title
             tvDate.text = getString(R.string.date, competition.date)
             tvTime.text = getString(R.string.time, competition.time)
-            tvLocation.text = getString(R.string.locations, competition.location)
-            tvActor.text = "CEO " + competition.actor
+            tvLocation.text = getString(R.string.location_arg, competition.location)
+            tvActor.text = getString(R.string.organizer, competition.actor)
             tvDescription.text = competition.description
+            btnReminder.setOnClickListener {
+                Toast.makeText(requireActivity(), "Pengingat pada event ini telah diaktifkan", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

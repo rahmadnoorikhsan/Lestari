@@ -5,9 +5,11 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.waterseven.macro.lestari.R
 import com.waterseven.macro.lestari.databinding.ItemWatchBinding
 import com.waterseven.macro.lestari.model.watch.Watch
 
@@ -53,6 +55,21 @@ class WatchAdapter : ListAdapter<Watch, WatchAdapter.WatchHolder>(DIFF_CALLBACK)
                 tvInitial.text = watch.account[0].toString().uppercase()
                 tvName.text = watch.account
                 tvDescription.text = watch.description
+                icMore.setOnClickListener {
+                    Toast.makeText(itemView.context, "Fitur ini sedang dikembangkan", Toast.LENGTH_SHORT).show()
+                }
+                icShare.setOnClickListener {
+                    Toast.makeText(itemView.context, "Fitur ini sedang dikembangkan", Toast.LENGTH_SHORT).show()
+                }
+                icFavorite.setOnClickListener {
+                    val isFav = false
+
+                    if (isFav) {
+                        icFavorite.setImageResource(R.drawable.baseline_favorite_border_24)
+                    } else {
+                        icFavorite.setImageResource(R.drawable.baseline_favorite_24)
+                    }
+                }
             }
         }
     }
