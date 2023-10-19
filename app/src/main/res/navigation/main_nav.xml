@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cultureDetailActivity"
+            app:destination="@id/cultureDetailActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_cultureFragment"
+            app:destination="@id/cultureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_museumFragment"
+            app:destination="@id/museumFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_eventFragment"
+            app:destination="@id/eventFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchFragment"
+        android:name="com.waterseven.macro.lestari.presentation.watch.WatchFragment"
+        android:label="fragment_watch"
+        tools:layout="@layout/fragment_watch" />
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.waterseven.macro.lestari.presentation.community.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" >
+        <action
+            android:id="@+id/action_communityFragment_to_communityDetailFragment"
+            app:destination="@id/communityDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.waterseven.macro.lestari.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/cultureDetailActivity"
+        android:name="com.waterseven.macro.lestari.presentation.home.culture.CultureDetailActivity"
+        android:label="activity_culture_detail"
+        tools:layout="@layout/activity_culture_detail" >
+        <argument
+            android:name="culture"
+            app:argType="com.waterseven.macro.lestari.model.culture.Culture" />
+    </activity>
+    <fragment
+        android:id="@+id/cultureFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.culture.CultureFragment"
+        android:label="fragment_culture"
+        tools:layout="@layout/fragment_culture" >
+        <action
+            android:id="@+id/action_cultureFragment_to_cultureDetailActivity"
+            app:destination="@id/cultureDetailActivity" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogMuseumFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.museum.DialogMuseumFragment"
+        android:label="DialogMuseumFragment" >
+        <argument
+            android:name="museum"
+            app:argType="com.waterseven.macro.lestari.model.museum.Museum" />
+    </dialog>
+    <fragment
+        android:id="@+id/museumFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.museum.MuseumFragment"
+        android:label="fragment_museum"
+        tools:layout="@layout/fragment_museum" >
+        <action
+            android:id="@+id/action_museumFragment_to_dialogMuseumFragment"
+            app:destination="@id/dialogMuseumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.information.event.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" >
+        <action
+            android:id="@+id/action_eventFragment_to_detailCompetitionFragment"
+            app:destination="@id/detailCompetitionFragment" />
+        <action
+            android:id="@+id/action_eventFragment_to_detailShowFragment"
+            app:destination="@id/detailShowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityDetailFragment"
+        android:name="com.waterseven.macro.lestari.presentation.community.CommunityDetailFragment"
+        android:label="CommunityDetailFragment" >
+        <argument
+            android:name="community"
+            app:argType="com.waterseven.macro.lestari.model.community.Community" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.information.article.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" >
+        <action
+            android:id="@+id/action_articleFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCompetitionFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.information.event.competition.DetailCompetitionFragment"
+        android:label="fragment_detail_competition"
+        tools:layout="@layout/fragment_detail_competition" >
+        <argument
+            android:name="competition"
+            app:argType="com.waterseven.macro.lestari.model.competition.Competition" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailShowFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.information.event.show.DetailShowFragment"
+        android:label="fragment_detail_show"
+        tools:layout="@layout/fragment_detail_show" >
+        <argument
+            android:name="show"
+            app:argType="com.waterseven.macro.lestari.model.show.Show" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailArticleFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.information.article.DetailArticleFragment"
+        android:label="fragment_detail_article"
+        tools:layout="@layout/fragment_detail_article" >
+        <argument
+            android:name="article"
+            app:argType="com.waterseven.macro.lestari.model.article.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.waterseven.macro.lestari.presentation.profile.myprofile.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.waterseven.macro.lestari.presentation.profile.myprofile.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.waterseven.macro.lestari.presentation.profile.myprofile.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.waterseven.macro.lestari.presentation.home.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+</navigation>

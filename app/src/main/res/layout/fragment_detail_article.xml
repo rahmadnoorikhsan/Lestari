@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.home.information.article.DetailArticleFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:src="@tools:sample/avatars" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            style="@style/TextAppearance.Material3.TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cover"
+            tools:text="Peradaban kebencanaan malam hidup tanpa dia" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_date_publish"
+            style="@style/TextAppearance.Material3.LabelSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            tools:text="Minggu, 28 Oktober 2023 18:00" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_publisher"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_publish"
+            tools:text="Andirini Mahalini" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_content"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_publisher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="KOMPAS.com - Keberagaman masyarakat Indonesia dipengaruhi oleh beberapa faktor, baik yang datang dari dalam maupun luar masyarakat. Hal tersebut juga dipengaruhi oleh faktor alam, diri sendiri, dan masyarakat. Berdasarkan buku Pendidikan Lingkungan Sosial, Budaya Dan Teknologi (2021) oleh Sutirna, secara umum keberagaman masyarakat Indonesia disebabkan oleh 5 hal, yakni: Letak strategis wilayah Indonesia Kondisi negara kepulauan Perbedaan kondisi alam Keadaan transportasi dan komunikasi Penerimaan masyarakat terhadap perubahan Berikut rinciannya:
+Letak strategis wilayah Indonesia Letak Indonesia yang strategis yaitu di antara dua yakni samudra Pasifik dan samudra Hindia, serta dua benua yakni benua Asia dan Australia. Hal terssebut yang mengakibatkan wilayah kita menjadi jalur perdagangan internasional. Lalu lintas perdagangan tidak hanya membawa komoditas dagang, namun juga pengaruh kebudayaan mereka terhadap budaya Indonesia. Kedatangan bangsa asing yang berbeda ras, kemudian menetap di Indonesia mengakibatkan perbedaan ras, agama, dan kepercayaan manusia.
+Kondisi negara kepulauan Negara Indonesia terdiri dari beribu-ribu pulau yang secara fisik terpisah-pisah. Keadaan ini menghambat hubungan antarmasyarakat Indonesia dari pulau yang berbeda-beda.
+Setiap masyarakat di kepulauan mengembangkan budaya mereka masing-masing, sesuai dengan tingkat kemajuan dan lingkungan masing-masing. Hal ini mengakibatkan perbedaan suku bangsa, bahasa, budaya, peran laki-laki dan perempuan, dan kepercayaan atau agama di Indonesia.
+Perbedaan kondisi alam Dikutip dari buku Perencanaan Pembelajaran PPKn (2017) oleh Ruslan dan Rusli Yusuf, Indonesia memiliki kondisi alam yang berbeda. Misalnya, daerah pantai, pegunungan, daerah subur, padang rumput, pegunungan, dataran rendah, rawa, dan laut mengakibatkan perbedaan masyarakat. Termasuk kondisi kekayaan alam, tanaman yang dapat tumbuh, hewan yang hidup di sekitarnya. Masyarakat di daerah pantai berbeda dengan masyarakat pegunungan, seperti perbedaan bentuk rumah, mata pencaharian, makanan pokok, pakaian, kesenian, bahkan kepercayaan.
+Keadaan transportasi dan komunikasi Kemajuan sarana transportasi dan komunikasi juga memengaruhi perbedaan masyarakat Indonesia. Kemudahan sarana ini membawa masyarakat mudah berhubungan dengan masyarakat lain, meskipun jarak dan kondisi alam yang sulit. Sebaliknya sarana yang terbatas juga menjadi penyebab keberagaman masyarakat Indonesia.
+"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

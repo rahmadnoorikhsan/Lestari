@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/arrow_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/round_button"
+        android:contentDescription="@string/back"
+        android:padding="8dp"
+        android:src="@drawable/ic_navigate_before"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/komunitas1"
+        app:layout_constraintStart_toEndOf="@+id/arrow_back"
+        app:layout_constraintTop_toTopOf="@+id/arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/arrow_back"
+        android:contentDescription="@string/logo" />
+
+    <TextView
+        android:id="@+id/namaKomunitas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/sanggar_seni_sarwi_retno_budaya"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/total_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_50_anggota"
+        app:layout_constraintStart_toStartOf="@+id/namaKomunitas"
+        app:layout_constraintTop_toBottomOf="@+id/namaKomunitas" />
+
+        <include
+            android:id="@+id/content_detail"
+            app:layout_constraintTop_toBottomOf="@+id/total_member"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            layout="@layout/fragment_tabs_community_detail"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

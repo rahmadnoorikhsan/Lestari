@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Elevated">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/ic_diversity_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/logo" />
+
+        <TextView
+            android:id="@+id/tvNamaKomunitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            tools:text="Taman Nasional Way Kambas"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="@+id/logo" />
+
+
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="taman nasional way kambas"
+            android:layout_marginHorizontal="16dp"
+            android:maxLines="2"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamaKomunitas" />
+
+        <ImageView
+            android:id="@+id/forum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_forum"
+            app:layout_constraintStart_toStartOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            android:contentDescription="@string/forum" />
+
+        <TextView
+            android:id="@+id/titleForum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black"
+            android:text="@string/_3_forum"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintStart_toEndOf="@+id/forum"
+            app:layout_constraintTop_toTopOf="@+id/forum"
+            app:layout_constraintBottom_toBottomOf="@+id/forum"/>
+
+        <ImageView
+            android:id="@+id/navigate_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigate_next_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titleForum"
+            android:contentDescription="@string/enter"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/pelatihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_pelatihan"
+            app:layout_constraintStart_toStartOf="@+id/forum"
+            app:layout_constraintTop_toBottomOf="@+id/forum"
+            android:contentDescription="@string/training" />
+
+        <TextView
+            android:id="@+id/titlePelatihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:text="@string/_3_pelatihan"
+            app:layout_constraintStart_toStartOf="@+id/titleForum"
+            app:layout_constraintTop_toTopOf="@+id/pelatihan"
+            app:layout_constraintBottom_toBottomOf="@+id/pelatihan"/>
+
+        <ImageView
+            android:id="@+id/navigate_next2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigate_next_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titlePelatihan"
+            android:contentDescription="@string/enter"
+            app:tint="@color/black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
