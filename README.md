@@ -3,7 +3,7 @@ Introduce culture to the younger generation, preserve culture
 
 ## Meet the Team
 | Member | Role | University | Contacts |
-| :--------------------: | :---------: | :-----------------------------------------------: | :-------------------------------------------------: |
+| :---------------------------: | :-----------------------------: | :------------------------------------------: | :-------------------------: |
 | [Franciscus Xaverius Andika Hardito](https://github.com/FranciscusXaveriusAndikaHardito) | Hustler | Universitas Papua | [LinkedIn](https://www.linkedin.com/in/fransiscus-xaverius-andika-a7aa26297) |
 | [Rifqi Nugraha](https://github.com/Rifqieeee) | Hipster | [LinkedIn - Rifqi] |
 | [Fadli Satria Caniago](https://github.com/Fadlicann) | Hipster | Universitas Muhammadiyah Sumatera Utara | [LinkedIn](https://www.linkedin.com/in/fadli-satria-4a0a93297) |
