@@ -1,8 +1,5 @@
-<p align="center">
-<h1 align="center">Lestari</h1>
-<h3 align="center">Introduce culture to the younger generation, preserve culture </h3>
-
-</p>
+# Lestari
+Introduce culture to the younger generation, preserve culture
 
 ## Meet the Team
 | Member | Role | Contacts |
