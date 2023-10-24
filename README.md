@@ -34,3 +34,13 @@ The part in charge of connecting and organizing models and views so that they ca
         <td><img src="screenshot/profile.jpg" align="center" alt="4"</td>
     </tr>
 <table>
+
+### Museum Digital Feature
+<table>
+    <tr>
+        <td><img src="screenshot/museum-digital.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/detail-museum.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/museum-batik.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/detail-batik.jpg" align="center" alt="4"</td>
+    </tr>
+<table>
