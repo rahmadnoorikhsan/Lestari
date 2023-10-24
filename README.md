@@ -7,7 +7,7 @@ Introduce culture to the younger generation, preserve culture
 | [Franciscus Xaverius Andika Hardito](https://github.com/FranciscusXaveriusAndikaHardito) | Hustler | Universitas Papua | [LinkedIn](https://www.linkedin.com/in/fransiscus-xaverius-andika-a7aa26297) |
 | [Rifqi Nugraha](https://github.com/Rifqieeee) | Hipster | Universitas | [LinkedIn] |
 | [Fadli Satria Caniago](https://github.com/Fadlicann) | Hipster | Universitas Muhammadiyah Sumatera Utara | [LinkedIn](https://www.linkedin.com/in/fadli-satria-4a0a93297) |
-| [Rahmad Noor Ikhsan](https://github.com/rahmadnoorikhsan) | Hacker | Universitas Sains Al-Qur'an | [LinkedIn](https://www.linkedin.com/in/rahmadnoorikhsan) |
+| [Rahmad Noor Ikhsan](https://github.com/rahmadnoorikhsan) | Hacker | Universitas Sains Al-Qur'an | [LinkedIn](https://www.linkedin.com/in/rhmdnrikhsn/) |
 | [Ahmad Ihsanullah Rabbani](https://github.com/ahmadihsanullah) | Hacker| Sekolah Tinggi Teknologi Terpada Nurul Fikri | [LinkedIn](https://www.linkedin.com/in/ahmad-ihsanullah) |
 | [Aufal Muaffaq](https://github.com/AufalMuaffaq) | Hacker | Universitas Bhinneka PGRI Tulung Agung| [LinkedIn](https://www.linkedin.com/in/aufal-muaffaq-a9a087222) |
 
