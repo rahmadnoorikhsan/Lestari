@@ -9,7 +9,7 @@ Introduce culture to the younger generation, preserve culture
 | [Fadli Satria Caniago](https://github.com/Fadlicann) | Hipster | Universitas Muhammadiyah Sumatera Utara | [LinkedIn](https://www.linkedin.com/in/fadli-satria-4a0a93297) |
 | [Rahmad Noor Ikhsan](https://github.com/rahmadnoorikhsan) | Hacker | Universitas Sains Al-Qur'an | [LinkedIn](https://www.linkedin.com/in/rahmadnoorikhsan) |
 | [Ahmad Ihsanullah Rabbani](https://github.com/ahmadihsanullah) | Hacker| Sekolah Tinggi Teknologi Terpada Nurul Fikri | [LinkedIn](https://www.linkedin.com/in/ahmad-ihsanullah) |
-| [Aufal Muaffaq](https://github.com/AufalMuaffaq) | Hacker | Universitas Bhinneka PGRI TulungAgung| [LinkedIn](https://www.linkedin.com/in/aufal-muaffaq-a9a087222) |
+| [Aufal Muaffaq](https://github.com/AufalMuaffaq) | Hacker | Universitas Bhinneka PGRI Tulung Agung| [LinkedIn](https://www.linkedin.com/in/aufal-muaffaq-a9a087222) |
 
 ## About
 Lestari is an app that invites you to explore Indonesian culture through videos, digital museums, interesting articles, and a community of culture lovers. You can also find out about cultural events and competitions in various regions. Lestari is the perfect app for those of you who want to learn and preserve Indonesian culture in a fun and interactive way.
