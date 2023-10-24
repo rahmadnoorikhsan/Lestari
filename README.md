@@ -44,3 +44,13 @@ The part in charge of connecting and organizing models and views so that they ca
         <td><img src="screenshot/detail-batik.jpg" align="center" alt="4"</td>
     </tr>
 <table>
+
+### Event Feature
+<table>
+    <tr>
+        <td><img src="screenshot/event-seni.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/detail-event-seni.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/event-lomba.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/event-detail-lomba.jpg" align="center" alt="4"</td>
+    </tr>
+<table>
