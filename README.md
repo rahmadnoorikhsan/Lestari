@@ -54,3 +54,13 @@ The part in charge of connecting and organizing models and views so that they ca
         <td><img src="screenshot/event-detail-lomba.jpg" align="center" alt="4"</td>
     </tr>
 <table>
+
+### Article & Culture Features
+<table>
+    <tr>
+        <td><img src="screenshot/artikel.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/detail-artikel.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/culture.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/detail-culture.jpg" align="center" alt="4"</td>
+    </tr>
+<table>
