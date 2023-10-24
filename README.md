@@ -86,4 +86,6 @@ The part in charge of connecting and organizing models and views so that they ca
 <table>
 
 ## Our Top Contributors 
-[<img src="https://github.com/{{ contributor }}.png" width="60px;"/><br /><sub><ahref="https://github.com/{{ contributor }}">{{ contributor }}</a></sub>](https://github.com/rahmadnoorikhsan/Lestari{{ contributor }}/{{ repository }}
+<p align="center"><a href="https://github.com/fineanmol/Hacktoberfest2023/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=fineanmol/Hacktoberfest2023" />
+</a></p>
