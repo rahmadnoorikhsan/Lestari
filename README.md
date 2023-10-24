@@ -12,3 +12,17 @@ The part in charge of displaying information in the form of a Graphical User Int
 
 - Controller
 The part in charge of connecting and organizing models and views so that they can be connected to each other.
+
+## Preview :
+<table>
+    <tr>
+        <td><img src="screenshot/home.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/watch1.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/my-community.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/profile.jpg" align="center" alt="4"</td>
+    </tr>
+    <tr>
+        <td><img src="screenshot/searching.jpg" align="center" alt="4"</td>
+         <td><img src="screenshot/favorite.jpg" align="center" alt="4"</td>
+   </tr>
+<table>
