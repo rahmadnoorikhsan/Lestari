@@ -4,7 +4,7 @@
 
 </p>
 
-#Meet the Team
+## Meet the Team
 | Member | Role | Contacts |
 | :--------------------: | :-----------------------------: | :---------------------------------------------: |
 | [Franciscus Xaverius Andika Hardito](https://github.com/FranciscusXaveriusAndikaHardito) | Hustler | [LinkedIn - Dika] |
@@ -14,7 +14,7 @@
 | [Ahmad Ihsanullah Rabbani](https://github.com/ahmadihsanullah) | Hacker| [LinkedIn - Ahmad] |
 | [Aufal Muaffaq](https://github.com/AufalMuaffaq) | Hacker | [LinkedIn - Aufall] |
 
-# About
+## About
 Lestari is an app that invites you to explore Indonesian culture through videos, digital museums, interesting articles, and a community of culture lovers. You can also find out about cultural events and competitions in various regions. Lestari is the perfect app for those of you who want to learn and preserve Indonesian culture in a fun and interactive way.
 
 ## Architecture
