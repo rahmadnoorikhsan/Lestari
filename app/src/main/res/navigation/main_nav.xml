@@ -47,7 +47,17 @@
         android:id="@+id/profileFragment"
         android:name="com.waterseven.macro.lestari.presentation.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+    </fragment>
     <activity
         android:id="@+id/cultureDetailActivity"
         android:name="com.waterseven.macro.lestari.presentation.home.culture.CultureDetailActivity"
@@ -84,6 +94,23 @@
             app:destination="@id/dialogMuseumFragment" />
     </fragment>
     <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.waterseven.macro.lestari.presentation.profile.myprofile.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.waterseven.macro.lestari.presentation.profile.myprofile.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.waterseven.macro.lestari.presentation.profile.myprofile.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+        android:id="@+id/myCommunity"
+        android:name="com.waterseven.macro.lestari.presentation.community.MyCommunity"
+        android:label="MyCommunity">
         android:id="@+id/myCommunity2"
         android:name="com.waterseven.macro.lestari.presentation.community.fragment.community.MyCommunity"
         android:label="MyCommunity" >
