@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import com.waterseven.macro.lestari.R
 import com.waterseven.macro.lestari.databinding.FragmentCommunityBinding
+import com.waterseven.macro.lestari.presentation.community.fragment.community.CommunitySharing
+import com.waterseven.macro.lestari.presentation.community.fragment.community.MyCommunity
 
 class CommunityFragment : Fragment() {
 
@@ -32,7 +34,7 @@ class CommunityFragment : Fragment() {
         if(myCommunity.isSelected){
             komunitasSaya()
         }else{
-//            cariKomunitas()
+            cariKomunitas()
         }
 
         tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -42,7 +44,7 @@ class CommunityFragment : Fragment() {
                     0 -> {
                         komunitasSaya()
                     }
-//                    1 -> cariKomunitas()
+                    1 -> cariKomunitas()
                 }
             }
 
@@ -65,12 +67,12 @@ class CommunityFragment : Fragment() {
         transaction.commit()
     }
 
-//    private fun cariKomunitas( ) {
-//        val hasilFragment = CommunitySharing() // Ganti dengan fragment yang sesuai
-//        val transaction = parentFragmentManager.beginTransaction()
-//        transaction.replace(R.id.communityFragmentContainer, hasilFragment)
-//        transaction.commit()
-//    }
+    private fun cariKomunitas( ) {
+        val hasilFragment = CommunitySharing() // Ganti dengan fragment yang sesuai
+        val transaction = parentFragmentManager.beginTransaction()
+        transaction.replace(R.id.communityFragmentContainer, hasilFragment)
+        transaction.commit()
+    }
     
     override fun onDestroyView() {
         super.onDestroyView()

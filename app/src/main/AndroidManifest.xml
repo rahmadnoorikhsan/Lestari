@@ -27,6 +27,9 @@
             android:name=".presentation.auth.RagisterActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.community.fragment.detail.CommunityDetail"
+            android:exported="false" />
+        <activity
             android:name=".presentation.home.culture.CultureDetailActivity"
             android:exported="false" />
         <activity

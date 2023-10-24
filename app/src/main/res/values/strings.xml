@@ -51,4 +51,9 @@
     <string name="name">Name</string>
     <string name="competition">Lomba</string>
     <string name="perform">Pentas Seni</string>
+    <string name="reminder">Ingatkan Saya</string>
+    <string name="date">Tanggal : %1$s</string>
+    <string name="time">Pukul : %1$s</string>
+    <string name="locations">Lokasi : %1$s</string>
+    <string name="actor">Dalang : %1$s</string>
 </resources>
