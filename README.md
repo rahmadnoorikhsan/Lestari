@@ -15,17 +15,17 @@ The part in charge of connecting and organizing models and views so that they ca
 
 ## Preview
 
-### Authentication :
+### Authentication
 <table>
     <tr>
         <td><img src="screenshot/login.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/login-example.jpg" align="center" alt="4"</td>
         <td><img src="screenshot/register.jpg" align="center" alt="4"</td>
-        <td><img src="screenshot/my-community.jpg" align="center" alt="4"</td>
-        <td><img src="screenshot/profile.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/register-example.jpg" align="center" alt="4"</td>
     </tr>
 <table>
     
-### Screen :
+### Screen
 <table>
     <tr>
         <td><img src="screenshot/home.jpg" align="center" alt="4"</td>
