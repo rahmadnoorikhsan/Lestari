@@ -30,6 +30,10 @@ class RvCommunitySharingAdapter(val data: (Community) -> Unit) : ListAdapter<Com
                 alamatKomunitas.text = community.location
                 totalMember.text = "${community.members.toString()} anggota • "
                 totalPelatihan.text = "${community.trainings.size.toString()} pelatihan"
+                gabungButton.setOnClickListener{
+
+                   community.join = true
+                }
                 itemView.setOnClickListener {data.invoke(community)}
             }
         }
